@@ -25,30 +25,55 @@
 // 	// .addIndicators()
 // 	// .addTo(controller);
 
-//     // $('#fullpage').fullpage();
 // });
 
 
 $(function() {
 
+    // $('#parallax2').fullpage({scrollingSpeed: 700});
+    var myScroll = new IScroll('.history-block');
+    $('#fullpage').fullpage({
+    	scrollingSpeed: 300,
+    	// autoScrolling: true,
+        afterRender: function () {
 
+            //playing the video
+            $('video').get(0).play();
+        }
+    	// scrollOverflow: true,
+    	// normalScrollElements: '.history-block'
+    });
+
+    //  $('#fullpage-inner').fullpage({
+    // 	scrollingSpeed: 1000,
+    // 	autoScrolling: false,
+    // 	 sectionSelector: 'section-inner'
+    // 	// scrollOverflow: true,
+    // 	// normalScrollElements: '.history-block'
+    // });
 
     // init controller
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+	// var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-	// build scenes
-	new ScrollMagic.Scene({triggerElement: "#parallax1"})
-					.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
+	// // build scenes
+	// new ScrollMagic.Scene({triggerElement: "#parallax1"})
+	// 				.setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
+	// 				.addIndicators()
+	// 				.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#parallax2"})
-					.setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#parallax2"})
+	// 				.setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
+	// 				.addIndicators()
+	// 				.addTo(controller);
 
-	new ScrollMagic.Scene({triggerElement: "#parallax3"})
-					.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-					.addIndicators()
-					.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#parallax3"})
+	// 				.setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
+	// 				.addIndicators()
+	// 				.addTo(controller);
+ //    new ScrollMagic.Scene({triggerElement: "#parallax4"})
+ //                    .setTween("#parallax4 > div", {y: "80%", ease: Linear.easeNone})
+ //                    .addIndicators()
+ //                    .addTo(controller);
+
+   
 });

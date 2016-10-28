@@ -1,10 +1,27 @@
 .second-sec
+	// overflow:scroll
+	// height: 500%
+	position: relative
 	width: 100%
-	display: flex
+	// display: flex
 	.history-block
 		width: 50%
+		height: 100%
 		display: block
+		left: 0
+		overflow-y: auto
+		// overflow: hidden
+		top: 0
+		// position: absolute 
+		&::-webkit-scrollbar
+    		display: none
 	.img-block
+		background-image: url('../images/historyimage1.jpg')
+		background-size: cover 
+		left: 50%
 		width: 50%
+		height: 100%
+		top: 0
+		position: absolute
 		display: block
 		overflow: hidden
