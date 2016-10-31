@@ -1,7 +1,16 @@
 .timeline
-	&-line
-		position: absolute
-		left: 50%
+	.line
+		// position: absolute
+		// top: 0
+		// z-index: -2
+		// height: 100%
+		// width: 100%
+		
+		// stroke-dasharray: 1000
+		// stroke-dashoffset: 1000
+		// // animation-iteration-count: 1
+		// // transition: stroke-dashoffset 1.5s ease-in
+		
 	
 
 	&-circle
@@ -18,3 +27,14 @@
 	    color: #000
 	    letter-spacing: .5px
 	    position: relative
+
+.svg-container
+	&.active
+		.line
+			stroke-dashoffset: 0
+			stroke-dasharray: 1000
+
+.event
+	background-color: $white 
+	float: left
+	position: absolute
