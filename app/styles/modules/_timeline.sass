@@ -1,40 +1,46 @@
-.timeline
-	.line
-		// position: absolute
-		// top: 0
-		// z-index: -2
-		// height: 100%
-		// width: 100%
-		
-		// stroke-dasharray: 1000
-		// stroke-dashoffset: 1000
-		// // animation-iteration-count: 1
-		// // transition: stroke-dashoffset 1.5s ease-in
-		
+.line
+	position: absolute
+	top: 0
+	z-index: -2
+	height: 100%
+	// left: 0
+	stroke-dasharray: 1000
+	stroke-dashoffset: 1000
+	animation-iteration-count: 1
+	transition: stroke-dashoffset 1.5s ease-in
+	
 	
 
-	&-circle
-		position: absolute
-		
-	&-date
-		width: 76px
-	    height: 76px
-	    display: block
-	    margin: 0 auto
-	    vertical-align: middle
-	    font-family: 'Geogrotesque', helvetica, arial, sans-serif
-	    font-weight: normal
-	    color: #000
-	    letter-spacing: .5px
-	    position: relative
+&-circle
+	position: absolute
+	
+&-date
+	width: 76px
+    height: 76px
+    display: block
+    margin: 0 auto
+    vertical-align: middle
+    font-family: 'Geogrotesque', helvetica, arial, sans-serif
+    font-weight: normal
+    color: #000
+    letter-spacing: .5px
+    position: relative
 
 .svg-container
+	// position: relative
+	
 	&.active
 		.line
 			stroke-dashoffset: 0
 			stroke-dasharray: 1000
 
 .event
-	background-color: $white 
+	background-color: #ffffff
 	float: left
-	position: absolute
+	// position: absolute
+	width: 33%
+	left: 8.5%
+	
+svg
+	overflow: visible
+	
