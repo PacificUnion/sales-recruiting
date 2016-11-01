@@ -8,31 +8,57 @@
 	stroke-dashoffset: 1000
 	animation-iteration-count: 1
 	transition: stroke-dashoffset 1.5s ease-in
-	
+	stroke: $dark-gray
+	stroke-width: 2 
+	fill: none
 	
 
-&-circle
-	position: absolute
+.circle
+	stroke: $dark-gray
+	stroke-width: 2 
+	fill: none
+	stroke-dasharray: 1000
+	stroke-dashoffset: 1000
+	transform: rotate(-45deg)
+	transform-origin: 50% 50%
+	animation-iteration-count: 1
+	transition: stroke-dashoffset 1.5s ease-in 0.7s
+	// position: absolute
+	// border: red solid 2px
 	
-&-date
-	width: 76px
-    height: 76px
-    display: block
-    margin: 0 auto
-    vertical-align: middle
-    font-family: 'Geogrotesque', helvetica, arial, sans-serif
-    font-weight: normal
-    color: #000
-    letter-spacing: .5px
-    position: relative
+.text
+	stroke: $green
+	font-family: 'Gotham Book'
+	font-size: 16px
+	transform: rotate(45deg)
+	// transform-origin: 50% 50%
+	
 
-.svg-container
+.date, p
+	opacity: 0
+	transform: translate(-20px, 0)
+	transition: all 300ms ease-in 0.7s
+	// width: 76px
+ //    height: 76px
+ //    display: block
+ //    margin: 0 auto
+ //    vertical-align: middle
+ //    font-family: 'Gotham Bold'
+ //    font-weight: normal
+ //    color: #000
+ //    letter-spacing: .5px
+ //    position: relative
+
+// .svg-container
 	// position: relative
-	
+.section	
 	&.active
-		.line
+		.line, .circle
 			stroke-dashoffset: 0
 			stroke-dasharray: 1000
+		.date, p
+			transform: translate(0,0)
+			opacity: 1
 
 .event
 	background-color: #ffffff
@@ -40,7 +66,4 @@
 	// position: absolute
 	width: 33%
 	left: 8.5%
-	
-svg
-	overflow: visible
 	

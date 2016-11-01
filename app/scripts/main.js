@@ -65,11 +65,11 @@ $(function() {
         //events
         onLeave: function(index, nextIndex, direction){
 
-            if(index == '1' && nextIndex == '2' ){
-                 $('.img-block').css('z-index', '-2');
+            // if(index == '1' && nextIndex == '2' ){
+            //      $('.img-block').css('z-index', '-2');
 
-                 console.log(index + ' ' + nextIndex);
-            }
+            //      console.log(index + ' ' + nextIndex);
+            // }
 
             if(index == '2' && nextIndex == '1' ){
                
@@ -80,10 +80,52 @@ $(function() {
 
         },
         afterLoad: function(anchorLink, index){
-            if(index == '2'){
+            if(index == '1'){
                
-                autoScrolling: false;
+                // autoScrolling: false;
                
+            }
+            if(index == 2){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-2 .svg-container').addClass('active');
+            }else{
+                $('#sec-2 .svg-container').removeClass('active');
+            }
+            if(index == 3){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-3 .svg-container').addClass('active');
+            }else{
+                $('#sec-3 .svg-container').removeClass('active');
+            }
+            if(index == 4){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-4 .svg-container').addClass('active');
+            }else{
+                $('#sec-4 .svg-container').removeClass('active');
+            }
+            if(index == 5){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-5 .svg-container').addClass('active');
+            }else{
+                $('#sec-5 .svg-container').removeClass('active');
+            }
+            if(index == 6){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-6 .svg-container').addClass('active');
+            }else{
+                $('#sec-6 .svg-container').removeClass('active');
+            }
+            if(index == 7){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-7 .svg-container').addClass('active');
+            }else{
+                $('#sec-7 .svg-container').removeClass('active');
+            }
+            if(index == 8){
+                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $('#sec-8 .svg-container').addClass('active');
+            }else{
+                $('#sec-8 .svg-container').removeClass('active');
             }
         },
        
