@@ -7,18 +7,18 @@ $(function() {
     $('#fullpage').fullpage({
 
         //Navigation
-        menu: false,
+        menu: '#navigation',
         lockAnchors: false,
-        anchors:[],
-        navigation: true,
-        navigationPosition: 'left',
+        anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+        navigation: false,
+        navigationPosition: 'right',
         navigationTooltips: [],
         showActiveTooltip: false,
-        slidesNavigation: false,
-        slidesNavPosition: 'bottom',
+        // slidesNavigation: false,
+        // slidesNavPosition: 'top',
 
         //Scrolling
-        css3: true,
+        css3: false,
         scrollingSpeed: 700,
         autoScrolling: true,
         fitToSection: true,
@@ -50,10 +50,11 @@ $(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        // sectionsColor : ['#ccc', '#fff'],
+        sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
+
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        fixedElements: '#header, .footer, #navigation',
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,
@@ -79,12 +80,12 @@ $(function() {
            
 
         },
-        $.preloadImages = function() {
-            for (var i = 0; i < arguments.length; i++) {
-                $("<img />").attr("src", arguments[i]);
-            }
-        }
-        $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
+        // $.preloadImages = function() {
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         $("<img />").attr("src", arguments[i]);
+        //     }
+        // }
+        // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == '1'){
                
