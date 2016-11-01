@@ -7,14 +7,14 @@ $(function() {
     $('#fullpage').fullpage({
 
         //Navigation
-        menu: '#menu',
+        menu: false,
         lockAnchors: false,
-        anchors:['firstPage', 'secondPage'],
-        navigation: false,
-        navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide'],
+        anchors:[],
+        navigation: true,
+        navigationPosition: 'left',
+        navigationTooltips: [],
         showActiveTooltip: false,
-        slidesNavigation: true,
+        slidesNavigation: false,
         slidesNavPosition: 'bottom',
 
         //Scrolling
@@ -79,6 +79,12 @@ $(function() {
            
 
         },
+        $.preloadImages = function() {
+            for (var i = 0; i < arguments.length; i++) {
+                $("<img />").attr("src", arguments[i]);
+            }
+        }
+        $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == '1'){
                
@@ -86,43 +92,43 @@ $(function() {
                
             }
             if(index == 2){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
                 $('#sec-2 .svg-container').addClass('active');
             }else{
                 $('#sec-2 .svg-container').removeClass('active');
             }
             if(index == 3){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/700/900)" ),
                 $('#sec-3 .svg-container').addClass('active');
             }else{
                 $('#sec-3 .svg-container').removeClass('active');
             }
             if(index == 4){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/600/900)" ),
                 $('#sec-4 .svg-container').addClass('active');
             }else{
                 $('#sec-4 .svg-container').removeClass('active');
             }
             if(index == 5){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/700/950)" ),
                 $('#sec-5 .svg-container').addClass('active');
             }else{
                 $('#sec-5 .svg-container').removeClass('active');
             }
             if(index == 6){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/800/1000)" ),
                 $('#sec-6 .svg-container').addClass('active');
             }else{
                 $('#sec-6 .svg-container').removeClass('active');
             }
             if(index == 7){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/700/1000)" ),
                 $('#sec-7 .svg-container').addClass('active');
             }else{
                 $('#sec-7 .svg-container').removeClass('active');
             }
             if(index == 8){
-                // $( "body" ).find('#right-content').css( "background-image", "url(img/yosemite-rock.jpg)" ),
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/850/1000)" ),
                 $('#sec-8 .svg-container').addClass('active');
             }else{
                 $('#sec-8 .svg-container').removeClass('active');
