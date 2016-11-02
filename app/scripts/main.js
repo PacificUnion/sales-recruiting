@@ -1,24 +1,23 @@
 
 
-
 $(function() {
 
   
     $('#fullpage').fullpage({
 
         //Navigation
-        menu: '#navigation',
+        menu: false,
         lockAnchors: false,
         anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-        navigation: false,
-        navigationPosition: 'right',
+        navigation: true,
+        navigationPosition: 'left',
         navigationTooltips: [],
         showActiveTooltip: false,
-        // slidesNavigation: false,
-        // slidesNavPosition: 'top',
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
 
         //Scrolling
-        css3: false,
+        css3: true,
         scrollingSpeed: 700,
         autoScrolling: true,
         fitToSection: true,
@@ -89,9 +88,12 @@ $(function() {
         afterLoad: function(anchorLink, index){
             if(index == '1'){
                
-                // autoScrolling: false;
+              $('#fp-nav').css('display', 'none');
                
+            }else{
+                 $('#fp-nav').css('display', 'block');
             }
+
             if(index == 2){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
                 $('#sec-2 .svg-container').addClass('active');

@@ -8,13 +8,19 @@
 	stroke-dashoffset: 1000
 	animation-iteration-count: 1
 	transition: stroke-dashoffset 1.5s ease-in
-	stroke: $dark-gray
+	// stroke: $dark-gray
+	stroke: #686868
 	stroke-width: 2 
 	fill: none
+	&-two
+		top: 50%
+		transition: stroke-dashoffset 1.5s ease-in 0.5s
+	
 	
 
 .circle
-	stroke: $dark-gray
+	// stroke: $dark-gray
+	stroke: #686868
 	stroke-width: 2 
 	fill: none
 	stroke-dasharray: 1000
@@ -23,18 +29,18 @@
 	transform-origin: 50% 50%
 	animation-iteration-count: 1
 	transition: stroke-dashoffset 1.5s ease-in 0.7s
-	// position: absolute
-	// border: red solid 2px
 	
 .text
-	stroke: $green
+	// stroke: $green
+	stroke: #50ad3c
 	font-family: 'Gotham Book'
 	font-size: 16px
 	transform: rotate(45deg)
 	// transform-origin: 50% 50%
 	
 .divider
-	stroke: $green
+	// stroke: $green
+	stroke: #50ad3c
 	stroke-width: 8
 	fill: none
 	stroke-dasharray: 1000
@@ -48,11 +54,13 @@
 
 h1
 	font-family: 'Droid Serif'
-	color: $dark-gray
+	// color: $dark-gray
+	color: #686868
 	font-size: 50px 
 p
 	font-family: 'Gotham Book' 
-	color: $dark-gray
+	// color: $dark-gray
+	color: #686868
 	font-size: 16px
 	 
 
@@ -69,7 +77,6 @@ p
 .event
 	background-color: #ffffff
 	float: left
-	// position: absolute
+
 	width: 33%
-	left: 8.5%
-	
+	left: 8.5%	
