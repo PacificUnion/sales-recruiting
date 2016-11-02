@@ -53,7 +53,7 @@ $(function() {
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '#header, .footer, #navigation, .nav-wrapper',
+        fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu',
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,
@@ -177,8 +177,11 @@ $(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){},
         afterRender: function () {
             $('#nav-icon').click(function(){
-                $(this).toggleClass('open');
+                $(this).toggleClass('open'),
+                $('.menu').toggleClass('active');
             });
+
+            var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
             //playing the video
             // $('video').get(0).play();
         }

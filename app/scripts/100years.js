@@ -355,3 +355,37 @@
 //         }
 //     });
 // });
+
+
+
+// <script type="text/javascript">
+//         $(document).ready(function() {
+//             $('#fullpage').fullpage({
+//                 anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+//                 sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
+//                 autoScrolling: false,
+//                 afterLoad: function(anchorLink, index){
+//                     var loadedSection = $(this);
+//                 }
+//             });
+
+//             $(document).keydown(function (e) {
+//             var shiftPressed = e.shiftKey;
+//             console.log(e.which);
+//             switch (e.which) {
+//                 //up
+//                 case 38:
+//                 case 33:
+//                     $.fn.fullpage.moveSectionUp();
+//                     break;
+
+//                 //down
+//                 case 40:
+//                 case 34:
+//                     $.fn.fullpage.moveSectionDown();
+//                     break;
+
+//             }
+//             });
+//         });
+//     </script>
