@@ -53,7 +53,7 @@ $(function() {
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '#header, .footer, #navigation',
+        fixedElements: '#header, .footer, #navigation, .nav-wrapper',
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,
@@ -71,10 +71,17 @@ $(function() {
             //      console.log(index + ' ' + nextIndex);
             // }
 
-            if(index == '2' && nextIndex == '1' ){
+            if(index == 2 && nextIndex == 1 ){
                
                 $('video').get(0).play();
-                 console.log(index + ' ' + nextIndex);
+                $('#fp-nav').css('display', 'none'); 
+
+            }
+
+            if(index == 10 && nextIndex == 11 ){
+               
+                $('#fp-nav').css('display', 'none'); 
+
             }
            
 
@@ -86,69 +93,94 @@ $(function() {
         // }
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
-            if(index == '1'){
-               
-              $('#fp-nav').css('display', 'none');
-               
+            if(index == 1 || index >= 11){
+                $('#fp-nav').css('display', 'none');               
             }else{
-                 $('#fp-nav').css('display', 'block');
+                $('#fp-nav').css('display', 'block');
             }
-
             if(index == 2){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
-                $('#sec-2 .svg-container').addClass('active');
+                $('#sec-2 .svg-container').addClass('active'),
+                $('.timeline-dates .first').addClass('active');
             }else{
-                $('#sec-2 .svg-container').removeClass('active');
+                $('.timeline-dates .first').removeClass('active');
             }
             if(index == 3){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/700/900)" ),
                 $('#sec-3 .svg-container').addClass('active');
+                $('.timeline-dates .second').addClass('active');
             }else{
-                $('#sec-3 .svg-container').removeClass('active');
+                $('#sec-3 .svg-container').removeClass('active'),
+                $('.timeline-dates .second').removeClass('active');
             }
             if(index == 4){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/600/900)" ),
-                $('#sec-4 .svg-container').addClass('active');
+                $('#sec-4 .svg-container').addClass('active'),
+                $('.timeline-dates .third').addClass('active');
             }else{
-                $('#sec-4 .svg-container').removeClass('active');
+                $('#sec-4 .svg-container').removeClass('active'),
+                $('.timeline-dates .third').removeClass('active');
             }
             if(index == 5){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/700/950)" ),
-                $('#sec-5 .svg-container').addClass('active');
+                $('#sec-5 .svg-container').addClass('active'),
+                $('.timeline-dates .fourth').addClass('active');
             }else{
-                $('#sec-5 .svg-container').removeClass('active');
+                $('#sec-5 .svg-container').removeClass('active'),
+                $('.timeline-dates .fourth').removeClass('active');
             }
             if(index == 6){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/800/1000)" ),
-                $('#sec-6 .svg-container').addClass('active');
+                $('#sec-6 .svg-container').addClass('active'),
+                $('.timeline-dates .fifth').addClass('active');
             }else{
-                $('#sec-6 .svg-container').removeClass('active');
+                $('#sec-6 .svg-container').removeClass('active'),
+                $('.timeline-dates .fifth').removeClass('active');
             }
             if(index == 7){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/700/1000)" ),
-                $('#sec-7 .svg-container').addClass('active');
+                $('#sec-7 .svg-container').addClass('active'),
+                $('.timeline-dates .sixth').addClass('active');
             }else{
-                $('#sec-7 .svg-container').removeClass('active');
+                $('#sec-7 .svg-container').removeClass('active'),
+                $('.timeline-dates .sixth').removeClass('active');
             }
             if(index == 8){
                 $(".img-block").css( "background-image", "url(http://fillmurray.com/850/1000)" ),
-                $('#sec-8 .svg-container').addClass('active');
+                $('#sec-8 .svg-container').addClass('active'),
+                $('.timeline-dates .seventh').addClass('active');
             }else{
-                $('#sec-8 .svg-container').removeClass('active');
+                $('#sec-8 .svg-container').removeClass('active'),
+                $('.timeline-dates .seventh').removeClass('active');
+            }
+            if(index == 9){
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/1003/1000)" ),
+                $('#sec-9 .svg-container').addClass('active'),
+                $('.timeline-dates .eigth').addClass('active');
+            }else{
+                $('#sec-8 .svg-container').removeClass('active'),
+                $('.timeline-dates .eigth').removeClass('active');
+            }
+            if(index == 10){
+                $(".img-block").css( "background-image", "url(http://fillmurray.com/1150/1000)" ),
+                $('#sec-10 .svg-container').addClass('active'),
+                $('.timeline-dates .ninth').addClass('active');
+            }else{
+                $('#sec-10 .svg-container').removeClass('active'),
+                $('.timeline-dates .ninth').removeClass('active');
             }
         },
        
         afterResize: function(){},
         afterResponsive: function(isResponsive){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-            
-
-        },
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){},
         afterRender: function () {
-
+            $('#nav-icon').click(function(){
+                $(this).toggleClass('open');
+            });
             //playing the video
-            $('video').get(0).play();
+            // $('video').get(0).play();
         }
   
   
