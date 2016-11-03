@@ -181,9 +181,9 @@ $(function() {
                 $('.menu').toggleClass('active');
             });
 
-            var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
+            // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
             //playing the video
-            // $('video').get(0).play();
+            $('video').get(0).play();
         }
   
   
