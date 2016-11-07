@@ -185,13 +185,18 @@ $(function() {
             // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
             //playing the video
             $('video').get(0).play();
-            $('#sec-11 .play').click(function(){
+            $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
                  $('#video-sec-11').toggleClass('active');
             });
-            $('#sec-11 .video-overlay').click(function(event){
-                 $('#video-sec-11').toggleClass('active');
-                 event.preventDefault()
+            // $('#sec-11 .video-overlay').click(function(){
+            //      $('#video-sec-11').toggleClass('active');
+            // });
+            $('#sec-12 .play, #sec-12 .video-overlay').click(function(){
+                 $('#video-sec-12').toggleClass('active');
             });
+            // $('#sec-12 .video-overlay').click(function(){
+            //      $('#video-sec-12').toggleClass('active');
+            // });
         }
   
   
