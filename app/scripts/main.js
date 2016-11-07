@@ -99,7 +99,7 @@ $(function() {
                 $('#fp-nav').css('display', 'block');
             }
             if(index == 2){
-                $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
+                // $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
                 $('#sec-2 .svg-container').addClass('active'),
                 $('.timeline-dates .first').addClass('active');
             }else{
@@ -188,15 +188,11 @@ $(function() {
             $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
                  $('#video-sec-11').toggleClass('active');
             });
-            // $('#sec-11 .video-overlay').click(function(){
-            //      $('#video-sec-11').toggleClass('active');
-            // });
+           
             $('#sec-12 .play, #sec-12 .video-overlay').click(function(){
                  $('#video-sec-12').toggleClass('active');
             });
-            // $('#sec-12 .video-overlay').click(function(){
-            //      $('#video-sec-12').toggleClass('active');
-            // });
+            
         }
   
   
