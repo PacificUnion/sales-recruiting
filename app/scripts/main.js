@@ -178,7 +178,8 @@ $(function() {
         afterRender: function () {
             $('#nav-icon').click(function(){
                 $(this).toggleClass('open'),
-                $('.menu').toggleClass('active');
+                $('.menu').toggleClass('active'),
+                $('.nav-local').toggleClass('active');
             });
 
             // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});

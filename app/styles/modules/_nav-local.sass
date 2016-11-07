@@ -1,18 +1,24 @@
 .nav-local
-	position: absolute
-    top: 50%
-    right: 1.6em
-    transform: translateY(-50%)
-    width: 0.7em
-    ul
-    	list-style: none
-    	li
-			width: 0.85em		
-			height: 0.85em		
-			border-radius: 50%		
-			border: 1px solid rgba(255, 255, 255, 0.6)		
-			box-sizing: border-box		
-			position: relative
-			background-color: transparent
-			transition: background-color 300ms
-			 	
+	position: fixed
+	color: $white
+	z-index: 1005
+	display: block
+	right: 2% 
+	top: 0
+	width: 20%
+	padding-top: 2%
+	transition: right 300ms ease-in
+	ul
+		width: 100%
+		li, a
+			display: inline-block
+			color: $white
+			list-style-type: none
+			font-family: 'Gotham Bold'
+			text-transform: uppercase 
+			padding-right: 5% 
+			
+	&.active
+		right: 17.5% 
+
+			
