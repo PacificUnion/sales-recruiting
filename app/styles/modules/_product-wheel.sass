@@ -36,7 +36,7 @@
 		position: absolute
 		left: 32.5%
 		margin-left: -155px
-		top: 36.5%
+		top: 37%
 		z-index: 8
 		// animation: spin 5s linear infinite
 	.inside-content
@@ -56,12 +56,12 @@
 	.dots-branches
 		position: absolute
 		
-		height: 900px
+		height: 850px
 		// width: 90%
-		margin-left: -450px
-		z-index: 25 
+		margin-left: -425px
+		z-index: 2
 		left: 32.5%
-		top: 4.5%
+		top: 6.5%
 		
 	
 	.bg-ring
@@ -73,7 +73,7 @@
 		margin-left: -400px  
 		width: 800px
 		// height: 800px
-		z-index: -1 
+		z-index: 0
 		animation: full-spin 20s linear infinite
 	// .outer-dots
 	// 	// width: 440px
@@ -87,32 +87,36 @@
 	// 	// animation: spin-shadow 5s linear infinite
 	// 	// display: none
 
-	// .branch
-	// 	position: absolute
-	// 	z-index: 100
-	// 	width: 25%
-	// 	height: auto
-	// 	&-fk
-	// 		width: 12%
-	// 		top: 0.5%
-	// 		left: 38.5%
-	// 	&-jumbo
-	// 		top: 27%
-	// 		left: 8.5%
-	// 	&-usda
-	// 		top: 62%
-	// 		left: 8%
-	// 	&-conv
-	// 		top: 72.5%
-	// 		left: 50%
-	// 	&-va
-	// 		top: 51%
-	// 		left: 66.5%
-	// 	&-fha
-	// 		width: 17%
-	// 		top: 14.5%
-	// 		left: 66%
-		
+	.dot
+		position: absolute
+		z-index: 500
+		width: 30px
+		height: auto
+		animation: pulse 2s linear infinite
+		animation-play-state: paused
+		cursor: pointer
+		&:hover
+			animation-play-state: running
+		&-flexkey
+			top: 5%
+			left: 19.6%
+		&-fha
+			top: 20.4%
+			left: 63.6%
+		&-va
+			top: 55.4%
+			left: 75.3%
+		&-conv
+			top: 94%
+			left: 58.5%
+		&-usda
+			top: 86%
+			left: -10.5%
+		&-jumbo
+			top: 34.2%
+			left: -10.1%
+			
+
 @keyframes spin
 	0%
 		transform: rotate(0deg) //scale(1)
@@ -125,9 +129,16 @@
 @keyframes full-spin
 	0%
 		transform:  rotate(0deg)
-	
 	100%
 		transform:  rotate(360deg)
+		
+@keyframes pulse
+	0%
+		transform: 	scale(1)
+	50%
+		transform: 	scale(1.1)
+	100%
+		transform: 	scale(1)
 		
 	// .dots
 	// 	// width: 350px
