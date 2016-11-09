@@ -4,97 +4,66 @@
 	bottom: 0
 	left: 0
 	right: 0
-	// top: 7.5%
-	// height: 100%
-	// left: -10%
-	// height: auto
-	
+		
 	.wheel
-		width: 250px
-		// width: 30%
-		// height: 30%
-		top: 40% 
+		// top: 40%
+		top: 52% 
 		left: 32.5%
 		margin-left: -125px
 		position: absolute
 		z-index: 10 
 		animation: spin 5s linear infinite
+		// width: 250px
 	.shadow
-		width: 450px
-		// width: 50%
-		// height: 50%
 		margin-left: -225px
 		position: absolute
 		left: 32.5%
-		top: 29.5%
+		// top: 29.5%
+		top: 52%
 		z-index: 1
-		// animation: spin-shadow 5s linear infinite
-	.outer-ring
-		width: 310px
-		// width: 37%
-		// height: 37%
-		position: absolute
-		left: 32.5%
-		margin-left: -155px
-		top: 37%
-		z-index: 8
-		// animation: spin 5s linear infinite
+		// width: 450px
+		
 	.inside-content
 		position: absolute
 		text-align: center
 		text-transform: uppercase
 		color: $blue
-		font-size: 2rem
 		font-family: 'Gotham Bold'
 		letter-spacing: 1px  
 		z-index: 11
-		width: 100%
 		left: 32.5%
 		margin-left: -50%
 		top: 51%
+		// font-size: 2rem
+		// width: 100%
 		
 	.dots-branches
 		position: absolute
-		
-		height: 850px
-		// width: 90%
 		margin-left: -425px
 		z-index: 2
 		left: 32.5%
-		top: 6.5%
-		
+		// top: 6.5%
+		top: 52%
+		// height: 850px
 	
 	.bg-ring
 		position: absolute
 		left: -9%
-		// margin-left: -42.5% 
-		top: 8%
+		top: 52%
 		left: 32.5%
 		margin-left: -400px  
-		width: 800px
-		// height: 800px
 		z-index: 0
 		animation: full-spin 20s linear infinite
-	// .outer-dots
-	// 	// width: 440px
-	// 	width: 44%
-	// 	height: 44%
-	// 	position: absolute
-	// 	left: 42.5%
-	// 	margin-left: -22%
-	// 	top: 28%
-	// 	z-index: 9
-	// 	// animation: spin-shadow 5s linear infinite
-	// 	// display: none
+		// width: 800px
 
 	.dot
 		position: absolute
 		z-index: 500
-		width: 30px
 		height: auto
 		animation: pulse 2s linear infinite
 		animation-play-state: paused
 		cursor: pointer
+		// width: 30px
 		&:hover
 			animation-play-state: running
 		&-flexkey
@@ -140,14 +109,3 @@
 	100%
 		transform: 	scale(1)
 		
-	// .dots
-	// 	// width: 350px
-	// 	width: 35%
-	// 	height: auto
-	// 	position: absolute
-	// 	left: 42.5%
-	// 	margin-left: -17.5%
-	// 	top: 25%
-	// 	z-index: 9
-	// 	animation: spin 5s linear infinite
-	// 	display: none
