@@ -186,13 +186,19 @@ $(function() {
             //playing the video
             $('video').get(0).play();
             $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
-                 $('#video-sec-11').toggleClass('active');
+                $('#video-sec-11').toggleClass('active');
             });
            
             $('#sec-12 .play, #sec-12 .video-overlay').click(function(){
-                 $('#video-sec-12').toggleClass('active');
+                $('#video-sec-12').toggleClass('active');
             });
-            
+            $('.dot-flexkey, .modal').click(function(){
+                $('.modal-flexkey').toggleClass('active');
+                setTimeout(function(){
+                     $('.nav-local, #nav-icon').toggleClass('hide-up');
+                 }, 200);
+               
+            });
         }
   
   
