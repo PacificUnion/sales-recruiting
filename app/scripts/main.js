@@ -198,9 +198,10 @@ $(function() {
             // Product modals
             $('.dot-flexkey, .modal-flexkey').click(function(){
                 $('.modal-flexkey').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
-
-            
+                $('.nav-local, #nav-icon, .nav-wrapper').addClass('hide-up');                
+            });
+            $('.modal-flexkey .next').click(function(){
+                $('.modal-fha').addClass('active');
             });
             $('.dot-fha, .modal-fha').click(function(){
                 $('.modal-fha').toggleClass('active');
