@@ -185,16 +185,21 @@ $(function() {
             // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
             //playing the video
             $('video').get(0).play();
+
             $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
                 $('#video-sec-11').toggleClass('active');
+
             });
            
             $('#sec-12 .play, #sec-12 .video-overlay').click(function(){
                 $('#video-sec-12').toggleClass('active');
             });
+
+            // Product modals
             $('.dot-flexkey, .modal-flexkey').click(function(){
                 $('.modal-flexkey').toggleClass('active');
-                $('.nav-local, #nav-icon').toggleClass('hide-up');
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
+
             
             });
             $('.dot-fha, .modal-fha').click(function(){

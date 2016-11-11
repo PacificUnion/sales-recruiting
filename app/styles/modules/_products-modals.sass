@@ -4,11 +4,15 @@
 	top: 0
 	width: 100%
 	height: 100%
-	background-color: $green
 	opacity: 0
-	z-index: 0
+	z-index: -1
 	transition: all 300ms ease-in
-
+	&-jumbo, &-va
+		background-color: $dark-gray 
+	&-flexkey, &-conv
+		background-color: $blue 
+	&-fha, &-usda
+		background-color: $green
 	.bg-img
 		position: absolute
 		height: auto
@@ -95,7 +99,18 @@
 		span:nth-child(2) 
 		    top: 0px
 		    transform-origin: center
-
+	.next
+		position: absolute
+		top: 45%
+		left: 90%
+		width: 4rem
+		height: 4rem
+	.prev
+		position: absolute
+		top: 45%
+		left: 10%
+		width: 4rem
+		height: 4rem
 	&.active
 		opacity: 1
 		z-index: 5000
@@ -109,6 +124,7 @@
 			    transform: rotate(-45deg)
 			    top: 10px
 			    left: 0px
+			 
 				
 				
  
