@@ -218,7 +218,7 @@ $(function() {
                 $('.modal-va').addClass('active'),
                 $('.modal-fha').removeClass('active');
             });
-             $('.modal-fha .prev').click(function(){
+            $('.modal-fha .prev').click(function(){
                 $('.modal-flexkey').addClass('active'),
                 $('.modal-fha').removeClass('active');
             });
@@ -227,20 +227,51 @@ $(function() {
                 $('.modal-va').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
             });
+            $('.modal-va .next').click(function(){
+                $('.modal-conv').addClass('active'),
+                $('.modal-va').removeClass('active');
+            });
+            $('.modal-va .prev').click(function(){
+                $('.modal-fha').addClass('active'),
+                $('.modal-va').removeClass('active');
+            });
             // conv
             $('.dot-conv, .modal-conv .close-modal').click(function(){
                 $('.modal-conv').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+            });$('.modal-conv .next').click(function(){
+                $('.modal-usda').addClass('active'),
+                $('.modal-conv').removeClass('active');
+            });
+            $('.modal-conv .prev').click(function(){
+                $('.modal-va').addClass('active'),
+                $('.modal-conv').removeClass('active');
             });
             // usda
             $('.dot-usda, .modal-usda .close-modal').click(function(){
                 $('.modal-usda').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
             });
+            $('.modal-usda .next').click(function(){
+                $('.modal-jumbo').addClass('active'),
+                $('.modal-usda').removeClass('active');
+            });
+            $('.modal-usda .prev').click(function(){
+                $('.modal-conv').addClass('active'),
+                $('.modal-usda').removeClass('active');
+            });
             // jumbo
             $('.dot-jumbo, .modal-jumbo .close-modal').click(function(){
                 $('.modal-jumbo').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+            });
+            $('.modal-jumbo .next').click(function(){
+                $('.modal-flexkey').addClass('active'),
+                $('.modal-jumbo').removeClass('active');
+            });
+            $('.modal-jumbo .prev').click(function(){
+                $('.modal-usda').addClass('active'),
+                $('.modal-jumbo').removeClass('active');
             });
         }
   
