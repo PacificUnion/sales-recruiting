@@ -53,7 +53,7 @@ $(function() {
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu',
+        fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
         responsiveWidth: 0,
         responsiveHeight: 0,
         responsiveSlides: false,

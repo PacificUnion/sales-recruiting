@@ -693,7 +693,6 @@
                 <li data-target="#myCarousel" data-slide-to="4"></li>
                 <li data-target="#myCarousel" data-slide-to="5"></li>
             </ol>
-
         </div> <!-- end carousel -->
 
     
@@ -703,8 +702,11 @@
             <img src="./images/SVGs/Glassdoor-Rating.svg" alt="" class="badge">
             <img src="./images/SVGs/Mortgage-Lender.svg" alt="" class="badge">
         </div>
-        <div class="button">I'm Ready to Learn More</div>
+        <div class="button" id="contact-us">I'm Ready to Learn More</div>
+        <!-- contact form -->
+
         <footer>
+       
             <div class="row social">
                 <div class="col-md-6 col-md-offset-2">
                     <div class="row help-links">
@@ -814,7 +816,22 @@
         </footer>
 
     </div>
-
+     <div class="form-contact">
+        <h4>Contact Us</h4>
+        <input type="text" id="first_name"  name="first_name" value=""  required placeholder="First Name">
+        <input type="text" id="last_name" name="last_name" value=""  required  placeholder="Last Name">
+        <input type="email" id="email" name="email" value="" required  placeholder="Email Address">
+        <input type="text" id="phone" name="phone" value=""  required placeholder="Phone Number">
+        <input type="text" id="address" name="address" value=""  required  placeholder="Home Address">
+        <input type="text" id="city" name="city" value=""  required  placeholder="City">
+        <!-- <input type="text" id="state" name="state" required list="states"  placeholder="State" > -->
+        <select id="states" name="state" required>
+            <option value="" disabled selected>State</option>
+            <option value="AL">Alabama</option>
+        </select>
+        <input pattern="[0-9]*" maxlength="5" required name="zip" id="zip" placeholder="Zip Code">
+        <div class="button" id="submit-contact-us">Submit</div>
+    </div>
 
   </div> <!--  end fullpage  -->
 

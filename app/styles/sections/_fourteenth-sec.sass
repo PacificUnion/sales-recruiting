@@ -24,7 +24,7 @@
 		text-transform: uppercase
 		text-align: center
 		background-color: $blue
-		border: none
+		border: transparent 1px solid
 		padding: 1.5rem
 		color: $white
 		width: 20%
@@ -32,7 +32,12 @@
 		position: absolute
 		top: 62%
 		left: 50%
-		margin-left: -10%   
+		margin-left: -10%
+		cursor: pointer
+		transition: all 300ms ease-in
+		&:hover
+			background-color: rgba(0,0,0,0.3)
+			border: $white 1px solid
 		
 	footer
 		bottom: 0
