@@ -60,7 +60,7 @@ $(function() {
 
         //Custom selectors
         sectionSelector: '.section',
-        slideSelector: '.slide',
+        slideSelector: '.slide-2',
 
         //events
         onLeave: function(index, nextIndex, direction){

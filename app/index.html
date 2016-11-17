@@ -640,20 +640,61 @@
     </div>
 
     <div class="fourteenth-sec section" id="sec-14">
-        <div class="next arrow"></div>
-        <div class="prev arrow"></div>
-        <div class="content">
-            <img src="./images/rick-skogg.png" alt="" class="profile-img">
-            <h3>Rick Skogg - President CEO</h3>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore, nemo sunt, distinctio doloremque sed repudiandae at voluptate fugit asperiores eius explicabo pariatur."</p>
-            <div class="badges">
-                <img src="./images/SVGs/Government-Lender.svg" alt="" class="badge">
-                <img src="./images/SVGs/Google-Rating.svg" alt="" class="badge">
-                <img src="./images/SVGs/Glassdoor-Rating.svg" alt="" class="badge">
-                <img src="./images/SVGs/Mortgage-Lender.svg" alt="" class="badge">
+
+        <div id="myCarousel" class="carousel slide"> <!-- data-ride="carousel" -->
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="./images/rick-skogg.png" alt="" class="profile-img">
+                    <h3>Rick Skogg - President CEO</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore, nemo sunt, distinctio doloremque sed repudiandae at voluptate fugit asperiores eius explicabo pariatur."</p>
+                </div>
+
+                <div class="item">
+                    <img src="http://fillmurray.com/200/201" alt="profile-img">
+                    <h3>Rick Skogg - President CEO</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore, nemo sunt, distinctio doloremque sed repudiandae at voluptate fugit asperiores eius explicabo pariatur."</p>
+                </div>
+
+                <div class="item">
+                    <img src="http://fillmurray.com/200/200" alt="profile-img">
+                    <h3>Rick Skogg - President CEO</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore, nemo sunt, distinctio doloremque sed repudiandae at voluptate fugit asperiores eius explicabo pariatur."</p>
+                </div>
+
+                <div class="item">
+                    <img src="http://fillmurray.com/200/203" alt="profile-img">
+                    <h3>Rick Skogg - President CEO</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo illum ullam, eos debitis inventore, nemo sunt, distinctio doloremque sed repudiandae at voluptate fugit asperiores eius explicabo pariatur."</p>
+                </div>
             </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="prev arrow"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="next arrow"></span>
+            </a>
+            
+
+        </div> <!-- end carousel -->
+            <!-- Indicators dots -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+
+        <div class="badges">
+            <img src="./images/SVGs/Government-Lender.svg" alt="" class="badge">
+            <img src="./images/SVGs/Google-Rating.svg" alt="" class="badge">
+            <img src="./images/SVGs/Glassdoor-Rating.svg" alt="" class="badge">
+            <img src="./images/SVGs/Mortgage-Lender.svg" alt="" class="badge">
         </div>
-        <div class="scroll-dots">000000</div>
         <div class="button">I'm Ready to Learn More</div>
         <footer>
             <div class="row social">
@@ -784,6 +825,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
+    <script src="/bower_components\bootstrap-sass\assets\javascripts\bootstrap\carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
