@@ -93,6 +93,9 @@ $(function() {
         // }
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
+            if(index == 1 ){
+                $('video').get(0).play();
+            }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none');               
             }else{
@@ -273,9 +276,15 @@ $(function() {
                 $('.modal-usda').addClass('active'),
                 $('.modal-jumbo').removeClass('active');
             });
+        
+            $('#contact-us').click(function(){
+                $('.form-contact').addClass('active');
+            });
+            $('.form-contact .close').click(function(){
+                $('.form-contact').removeClass('active');
+            });
+
         }
-  
-  
     	// scrollOverflow: true,
     	// normalScrollElements: '.history-block'
     });
