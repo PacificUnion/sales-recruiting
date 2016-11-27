@@ -6,13 +6,16 @@
 	height: 100%
 	opacity: 0
 	z-index: -1
-	transition: all 300ms ease-in
-	&-jumbo, &-va
-		background-color: $dark-gray 
-	&-flexkey, &-conv
-		background-color: $blue 
-	&-fha, &-usda
-		background-color: $green
+	background-color: transparent 
+	// transition: opacity 300ms ease-in
+	// transition: background-color 2000ms ease-in
+	// transition: z-index 3000ms ease-in
+	// &-jumbo, &-va
+	// 	background-color: $dark-gray 
+	// &-flexkey, &-conv
+	// 	background-color: $blue 
+	// &-fha, &-usda
+	// 	background-color: $green
 	.bg-img
 		position: absolute
 		height: auto
@@ -60,7 +63,8 @@
 				position: relative
 				line-height: 32px
 				padding-left: 3.5rem
-				text-indent: -3.5rem 
+				text-indent: -3.5rem
+				transition: 
 		.left
 			width: 50%
 			left: 0
@@ -128,5 +132,11 @@
 				
 				
  
-		
+.modal-bg
+	&.blue
+		background-color: $blue
+	&.green
+	 	background-color: $green
+	&.gray
+	  	background-color: $gray 
 		

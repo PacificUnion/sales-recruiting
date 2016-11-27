@@ -9,7 +9,7 @@ $(function() {
         menu: false,
         lockAnchors: false,
         anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-        navigation: true,
+        navigation: true, //needed for navigation on timeline
         navigationPosition: 'left',
         navigationTooltips: [],
         showActiveTooltip: false,
@@ -49,18 +49,18 @@ $(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
+        // sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
         fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
-        responsiveWidth: 0,
+        responsiveWidth: 768,
         responsiveHeight: 0,
-        responsiveSlides: false,
+        responsiveSlides: null,
 
         //Custom selectors
         sectionSelector: '.section',
-        slideSelector: '.slide-2',
+        slideSelector: null,
 
         //events
         onLeave: function(index, nextIndex, direction){
@@ -94,7 +94,7 @@ $(function() {
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == 1 ){
-                $('video').get(0).play();
+                //$('video').get(0).play();
             }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none');               
@@ -185,9 +185,7 @@ $(function() {
                 $('.nav-local').toggleClass('active');
             });
 
-            // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
-            //playing the video
-            $('video').get(0).play();
+            // $('video').get(0).play();
 
             $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
                 $('#video-sec-11').toggleClass('active');
@@ -202,7 +200,8 @@ $(function() {
             // flexkey
             $('.dot-flexkey, .modal-flexkey .close-modal').click(function(){
                 $('.modal-flexkey').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');                
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');   
+                // $('.modal-bg').addClass('blue');             
             });
             $('.modal-flexkey .next').click(function(){
                 $('.modal-fha').addClass('active'),
@@ -216,6 +215,7 @@ $(function() {
             $('.dot-fha, .modal-fha .close-modal').click(function(){
                 $('.modal-fha').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
+                // $('.modal-bg').addClass('green');
             });
             $('.modal-fha .next').click(function(){
                 $('.modal-va').addClass('active'),
@@ -228,7 +228,8 @@ $(function() {
             // va
             $('.dot-va, .modal-va .close-modal').click(function(){
                 $('.modal-va').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
+                // $('.modal-bg').addClass('gray');
             });
             $('.modal-va .next').click(function(){
                 $('.modal-conv').addClass('active'),
@@ -241,7 +242,8 @@ $(function() {
             // conv
             $('.dot-conv, .modal-conv .close-modal').click(function(){
                 $('.modal-conv').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');    
+                // $('.modal-bg').addClass('blue');        
             });$('.modal-conv .next').click(function(){
                 $('.modal-usda').addClass('active'),
                 $('.modal-conv').removeClass('active');
@@ -253,7 +255,8 @@ $(function() {
             // usda
             $('.dot-usda, .modal-usda .close-modal').click(function(){
                 $('.modal-usda').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
+                // $('.modal-bg').addClass('green');
             });
             $('.modal-usda .next').click(function(){
                 $('.modal-jumbo').addClass('active'),
@@ -266,7 +269,8 @@ $(function() {
             // jumbo
             $('.dot-jumbo, .modal-jumbo .close-modal').click(function(){
                 $('.modal-jumbo').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');            
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
+                // $('.modal-bg').addClass('gray');
             });
             $('.modal-jumbo .next').click(function(){
                 $('.modal-flexkey').addClass('active'),
