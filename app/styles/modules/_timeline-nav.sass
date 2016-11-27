@@ -1,6 +1,5 @@
-#fp-nav, .timeline-dates
+#fp-nav
 	display: none
-
 
 
 
@@ -8,21 +7,26 @@
 	#fp-nav
 		position: fixed
 		top: 41%
+		left: 0
 		height: 100vh
 		z-index: 100
 		padding: 1% 0 
 		opacity: 1
 		list-style-type: none
+		display: block
 		ul
 			height: 100%
 			margin: 0
 			// padding: 0
-			margin-left: -1px 
+			// margin-left: -1px 
+			margin-left: -45px
+			padding-left: 60px
 		li
 			display: block
 			width: 30px
 			height: 11.111%
 			position: relative
+			padding-left: 2%
 			a
 				display: block
 				position: relative
@@ -34,6 +38,7 @@
 				span
 					border-radius: 0
 					position: absolute
+					left: 100%
 					z-index: 1
 					height: 5px
 					width: 2px
