@@ -83,7 +83,20 @@ p
 	float: left
 	width: 100%
 	left: 0
+	
+.mobile-img
+	width: 142%
+	height: 200px
+	margin-left: -21%
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat   
+	&-1
+		background-image: url(http://fillmurray.com/400/300) 
+		
 @media screen and (min-width: 768px)
 	.event
 		width: 33%
 		left: 8.5%
+	.mobile-img
+		display: none

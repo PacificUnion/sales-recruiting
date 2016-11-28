@@ -13,7 +13,8 @@
 		// margin-top: -75px 
 		// margin-left: -75px
 		cursor: pointer
-		
+	.video-overlay
+		margin-top: 100%	
 
 	h1, h3
 		opacity: 0
@@ -31,7 +32,7 @@
 			font-family: 'Gotham Book'
 			color: #686868
 			list-style: none 
-			padding: 5%
+			padding-left: 5%
 			// list-style: circle url('../images/checkmark-bullet.png')
 			h3
 				font-family: 'Gotham Bold'
@@ -62,7 +63,8 @@
 		left: 0
 		position: relative
 		vertical-align: middle
-		
+		padding-bottom: 3rem 
+		border-bottom: $gray dashed 2px
 		&::before, &::after
 			// border-right: 2px dashed transparent 
 			width: 0
@@ -126,6 +128,8 @@
 			transition: all 300ms ease-in-out
 			&:hover
 				transform: scale(0.95)
+		.video-overlay
+			margin-top: 0	
 		h1, h3
 			opacity: 0
 			transform: scale(0.3)
