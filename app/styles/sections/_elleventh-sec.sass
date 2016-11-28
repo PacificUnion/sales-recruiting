@@ -1,9 +1,12 @@
 .elleventh-sec
 	background-image: url(../images/john-hummel-image.jpg) 
 	background-size: cover
+	background-position: center 
 	.event
 		background-color: transparent 	
 	.play
+		width: 40%
+		padding-top: 6rem 
 		padding-bottom: 6rem
 		cursor: pointer
 		// opacity: 0
@@ -13,12 +16,16 @@
 			transform: scale(0.95)
 		 
 	.content, .sub-content
-		color: #fff
+		// position: absolute
+		
+
+		color: $white
 		font-family: 'Gotham Book'
-		font-size: 18px
+		font-size: 1.5rem
+		left: 0
 		text-align: center
-		width: 70%
-		margin-left: 15% 
+		width: 120%
+		margin-left: -10%
 		line-height: 34px 
 	.sub-content
 		font-size: 17px
@@ -33,18 +40,59 @@
 	 	
 	&.active
 	 	.play
-	 		// animation: drop-in 300ms ease-in forwards 700ms
-				// name: list-drop 
-				// delay: 1s
-				// duration 300ms
-				// timing-function: ease-in
-				// fill-mode: forwards
 
 
-// @keyframes drop-in
-// 	0%
-// 		opacity: 0
-// 		transform: translateY(-15px)
-// 	100%
-// 		opacity: 1
-// 		transform: translateY(0px)
+@media screen and (min-width: 768px)
+	.elleventh-sec
+		background-image: url(../images/john-hummel-image.jpg) 
+		background-size: cover
+		.event
+			background-color: transparent 	
+		.play
+			width: auto
+			padding-top: auto 
+			padding-bottom: 6rem
+			cursor: pointer
+			// opacity: 0
+			transform: scale(1)
+			transition: all 300ms ease-in-out
+			&:hover
+				transform: scale(0.95)
+			 
+		.content, .sub-content
+			color: #fff
+			font-family: 'Gotham Book'
+			font-size: 18px
+			text-align: center
+			width: 70%
+			margin-left: 15% 
+			line-height: 34px 
+			left: auto
+		.sub-content
+			font-size: 17px
+			
+			
+		.signature
+		 	color: #fff
+		 	font-family: 'Jenna Sue'
+		 	font-size: 41px
+		 	text-align: center
+		 	line-height: 60px
+		 	
+		&.active
+		 	.play
+		 		// animation: drop-in 300ms ease-in forwards 700ms
+					// name: list-drop 
+					// delay: 1s
+					// duration 300ms
+					// timing-function: ease-in
+					// fill-mode: forwards
+
+
+	// @keyframes drop-in
+	// 	0%
+	// 		opacity: 0
+	// 		transform: translateY(-15px)
+	// 	100%
+	// 		opacity: 1
+	// 		transform: translateY(0px)

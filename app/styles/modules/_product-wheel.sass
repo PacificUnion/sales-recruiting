@@ -12,7 +12,7 @@
 		margin-left: -125px
 		position: absolute
 		z-index: 10 
-		animation: spin 5s linear infinite
+		// animation: spin 5s linear infinite
 		// width: 250px
 	.shadow
 		margin-left: -225px
@@ -53,15 +53,15 @@
 		left: 32.5%
 		margin-left: -400px  
 		z-index: 0
-		animation: full-spin 20s linear infinite
+		// animation: full-spin 20s linear infinite
 		// width: 800px
 
 	.dot
 		position: absolute
 		z-index: 500
 		height: auto
-		animation: pulse 2s linear infinite
-		animation-play-state: paused
+		// animation: pulse 2s linear infinite
+		// animation-play-state: paused
 		cursor: pointer
 		// width: 30px
 		&:hover
@@ -84,7 +84,15 @@
 		&-jumbo
 			top: 34.2%
 			left: -10.1%
-			
+.active
+	.product-wheel
+		.wheel
+		    animation: spin 5s linear infinite
+		.bg-ring
+		    animation: full-spin 20s linear infinite
+		.dot
+		    animation: pulse 2s linear infinite
+		    animation-play-state: paused		
 
 @keyframes spin
 	0%
