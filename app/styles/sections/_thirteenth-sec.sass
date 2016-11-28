@@ -1,18 +1,23 @@
 .thirteenth-sec
-	.product-wrapper
-		position: relative
-		top: 50%
-		// height: 100%
-		// padding-right: 96.525%  // 1 : 1.036 aspect ratio
-		// width: 1000px
-		// height: 900px
-
 	.product-block
-		background-color: #ffffff 
-		width: 50%
-		height: 100%
-		left: 50%
-		top: 0
-		position: absolute
-	
-	
+		display: none
+	@media screen and (min-width: 768px)	
+		.product-wrapper
+			position: relative
+			top: 50%
+			
+			// height: 100%
+			// padding-right: 96.525%  // 1 : 1.036 aspect ratio
+			// width: 1000px
+			// height: 900px
+
+		.product-block
+			background-color: #ffffff 
+			width: 50%
+			height: 100%
+			left: 50%
+			top: 0
+			position: absolute
+			display: block
+		
+		
