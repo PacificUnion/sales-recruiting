@@ -60,7 +60,7 @@ $(function() {
 
         //Custom selectors
         sectionSelector: '.section',
-        slideSelector: null,
+        slideSelector: 'slider-2',
 
         //events
         onLeave: function(index, nextIndex, direction){
@@ -75,18 +75,15 @@ $(function() {
                
                 $('video').get(0).play();
                 $('#fp-nav').css('display', 'none');
-                 $('.timeline-dates').css('display', 'none');  
+                $('.timeline-dates').css('display', 'none');  
 
             }
 
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
-                 $('.timeline-dates').css('display', 'none'); 
-
-
+                $('.timeline-dates').css('display', 'none'); 
             }
-           
 
         },
         // $.preloadImages = function() {
@@ -100,9 +97,11 @@ $(function() {
                 //$('video').get(0).play();
             }
             if(index == 1 || index >= 11){
-                $('#fp-nav').css('display', 'none');               
+                $('#fp-nav').css('display', 'none'); 
+                $('.timeline-dates').css('display', 'none');            
             }else{
                 $('#fp-nav').css('display', 'block');
+                $('.timeline-dates').css('display', 'block');
             }
             if(index == 2){
                 // $(".img-block").css( "background-image", "url(http://fillmurray.com/500/800)" ),
@@ -175,6 +174,7 @@ $(function() {
                 $('#sec-10 .svg-container').removeClass('active'),
                 $('.timeline-dates .ninth').removeClass('active');
             }
+           
         },
        
         afterResize: function(){},
