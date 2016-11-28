@@ -74,13 +74,16 @@ $(function() {
             if(index == 2 && nextIndex == 1 ){
                
                 $('video').get(0).play();
-                $('#fp-nav').css('display', 'none'); 
+                $('#fp-nav').css('display', 'none');
+                 $('.timeline-dates').css('display', 'none');  
 
             }
 
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
+                 $('.timeline-dates').css('display', 'none'); 
+
 
             }
            
