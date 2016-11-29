@@ -1,0 +1,38 @@
+.mobile-products
+	margin-bottom: 5rem 
+	.wheel
+		margin: 2rem 0
+		width: 90%
+		height: auto
+	.product
+		background-size: 90%
+		background-position: right 
+		background-repeat: no-repeat 
+		width: 120%
+		margin-left: -15%
+		height: 4rem
+		text-align: left
+		font-family: 'Gotham Bold'
+		font-size: 1.5rem
+		span
+			padding-left: 8rem
+		
+
+		&-flexkey, &-conv
+			background-image: url(../images/blue-line.png)
+			span
+				color: $blue
+		&-fha, &-usda
+			background-image: url(../images/green-line.png)
+			span
+				color: $green
+		&-va, &-jumbo
+		 	background-image: url(../images/gray-line.png)
+		 	span
+		 		color: $text-gray
+		
+
+@media screen and (min-width: 768px)
+	.mobile-products 
+		display: none
+	
