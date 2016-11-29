@@ -201,7 +201,7 @@ $(function() {
 
             // Product modals
             // flexkey
-            $('.dot-flexkey, .modal-flexkey .close-modal').click(function(){
+            $('.dot-flexkey, .modal-flexkey .close-modal, .product-flexkey').click(function(){
                 $('.modal-flexkey').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');   
                 // $('.modal-bg').addClass('blue');             
