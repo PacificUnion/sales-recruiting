@@ -215,7 +215,7 @@ $(function() {
                 $('.modal-flexkey').removeClass('active');
             });
             // fha
-            $('.dot-fha, .modal-fha .close-modal').click(function(){
+            $('.dot-fha, .modal-fha .close-modal, .product-fha').click(function(){
                 $('.modal-fha').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
                 // $('.modal-bg').addClass('green');
@@ -229,7 +229,7 @@ $(function() {
                 $('.modal-fha').removeClass('active');
             });
             // va
-            $('.dot-va, .modal-va .close-modal').click(function(){
+            $('.dot-va, .modal-va .close-modal, .product-va').click(function(){
                 $('.modal-va').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
                 // $('.modal-bg').addClass('gray');
@@ -243,7 +243,7 @@ $(function() {
                 $('.modal-va').removeClass('active');
             });
             // conv
-            $('.dot-conv, .modal-conv .close-modal').click(function(){
+            $('.dot-conv, .modal-conv .close-modal, .product-conv').click(function(){
                 $('.modal-conv').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');    
                 // $('.modal-bg').addClass('blue');        
@@ -256,7 +256,7 @@ $(function() {
                 $('.modal-conv').removeClass('active');
             });
             // usda
-            $('.dot-usda, .modal-usda .close-modal').click(function(){
+            $('.dot-usda, .modal-usda .close-modal, .product-usda').click(function(){
                 $('.modal-usda').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
                 // $('.modal-bg').addClass('green');
@@ -270,7 +270,7 @@ $(function() {
                 $('.modal-usda').removeClass('active');
             });
             // jumbo
-            $('.dot-jumbo, .modal-jumbo .close-modal').click(function(){
+            $('.dot-jumbo, .modal-jumbo .close-modal, .product-jumbo').click(function(){
                 $('.modal-jumbo').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
                 // $('.modal-bg').addClass('gray');
