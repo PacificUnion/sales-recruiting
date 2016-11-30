@@ -85,7 +85,24 @@ $(function() {
                 $('#fp-nav').css('display', 'none'); 
                 $('.timeline-dates').css('display', 'none'); 
             }
-
+            if(index == 12 && nextIndex == 11 ){
+                setTimeout(function(){
+                    $('.slide-12-video').css('display', 'none'); 
+                }, 550);
+            }
+            if(index == 12 && nextIndex == 13 ){
+                // setTimeout(function(){
+                // }, 150);
+                    $('.slide-12-video').css('display', 'none'); 
+            }
+            if(index == 11 && nextIndex == 12 ){
+                $('.slide-12-video').css('display', 'block'); 
+            }
+            if(index == 13 && nextIndex == 12 ){
+                setTimeout(function(){
+                    $('.slide-12-video').css('display', 'block'); 
+                }, 300);
+            }
         },
         // $.preloadImages = function() {
         //     for (var i = 0; i < arguments.length; i++) {
@@ -95,7 +112,7 @@ $(function() {
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == 1 ){
-                //$('video').get(0).play();
+                $('video').get(0).play();
             }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none'); 
@@ -176,6 +193,12 @@ $(function() {
                 $('#sec-10 .svg-container').removeClass('active'),
                 $('.timeline-dates .ninth').removeClass('active');
             }
+            if(index == 11){
+                $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
+            }
+            // if(index == 12){
+            //     $('.slide-12-video').css('display', 'block'); 
+            // }
            
         },
        
