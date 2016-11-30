@@ -135,7 +135,7 @@ $(function() {
                 $('.timeline-dates .first').removeClass('active');
             }
             if(index == 3){
-                $('.img-block').css( 'background-image', 'url(http://fillmurray.com/700/900)' ),
+                $('.img-block').css( 'background-image', 'url(./images/are-you-ready-bg.jpg)' ),
                 $('#sec-3 .svg-container').addClass('active');
                 $('.timeline-dates .second').addClass('active');
             }else{
