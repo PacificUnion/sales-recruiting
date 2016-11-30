@@ -73,7 +73,7 @@ $(function() {
 
             if(index == 2 && nextIndex == 1 ){
                
-                $('video').get(0).play();
+                $('video').get(1).play();
                 $('#fp-nav').css('display', 'none');
                 $('.timeline-dates').css('display', 'none');  
                 $('.logo-wrapper').css('display', 'block');
@@ -91,9 +91,11 @@ $(function() {
                 }, 550);
             }
             if(index == 12 && nextIndex == 13 ){
-                // setTimeout(function(){
-                // }, 150);
+                $('.img-block').css('background-image', 'url(../images/screenshots/pace-loop.png)')
                     $('.slide-12-video').css('display', 'none'); 
+                // setTimeout(function(){
+
+                // }, 300);
             }
             if(index == 11 && nextIndex == 12 ){
                 $('.slide-12-video').css('display', 'block'); 
@@ -103,6 +105,9 @@ $(function() {
                     $('.slide-12-video').css('display', 'block'); 
                 }, 300);
             }
+            // if(index == 11 && nextIndex == 10 ){
+            //     $('.img-block').css( 'background-image', 'url(http://fillmurray.com/700/900)' );
+            // }
         },
         // $.preloadImages = function() {
         //     for (var i = 0; i < arguments.length; i++) {
@@ -112,7 +117,7 @@ $(function() {
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == 1 ){
-                $('video').get(0).play();
+                $('video').get(1).play();
             }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none'); 
@@ -194,7 +199,8 @@ $(function() {
                 $('.timeline-dates .ninth').removeClass('active');
             }
             if(index == 11){
-                $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
+                // $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
+                $('.slide-12-video').css('display', 'none');
             }
             // if(index == 12){
             //     $('.slide-12-video').css('display', 'block'); 
@@ -213,7 +219,7 @@ $(function() {
                 $('.nav-local').toggleClass('active');
             });
 
-            $('video').get(0).play();
+            $('video').get(1).play();
 
             $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
                 $('#video-sec-11').toggleClass('active');
