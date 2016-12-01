@@ -333,7 +333,7 @@ $(function() {
                 var formData = $(form).serialize();
 
                 if ($('#recruiting-site-form')[0].checkValidity()) {
-                    document.getElementById("form-submit").setAttribute("disabled", "true");
+                    document.getElementById('form-submit').setAttribute('disabled', 'true');
                     $.ajax({
                         type: 'POST',
                         url: '../assets/php-email-services/recruiting-site-email-service.php',
