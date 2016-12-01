@@ -80,6 +80,7 @@ $(function() {
 
             }
 
+
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
@@ -110,16 +111,19 @@ $(function() {
             // }
         },
         
-        $.preloadImages = function() {
-            for (var i = 0; i < arguments.length; i++) {
-                $("<img />").attr("src", arguments[i]);
-            }
-        }
-        $.preloadImages("images/timeline/today.jpg","images/timeline/2016.jpg","images/timeline/2015.jpg","images/timeline/2014.jpg","images/timeline/2013.jpg","images/timeline/2012.jpg","images/timeline/2011.jpg","images/timeline/2008.jpg","images/timeline/2004.jpg");
+        // $.preloadImages = function() {
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         $('.img-block').attr("src", arguments[i]);
+        //     }
+        // }
+        // $.preloadImages("images/timeline/today.jpg","images/timeline/2016.jpg","images/timeline/2015.jpg","images/timeline/2014.jpg","images/timeline/2013.jpg","images/timeline/2012.jpg","images/timeline/2011.jpg","images/timeline/2008.jpg","images/timeline/2004.jpg");
 
         afterLoad: function(anchorLink, index){
             if(index == 1 ){
                 $('video').get(1).play();
+
+            }else{
+                $('.logo-wrapper').css('display', 'none');                
             }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none'); 
@@ -228,7 +232,7 @@ $(function() {
 
             });
            
-            $('#sec-12 .play, #sec-12 .video-overlay').click(function(){
+            $('#sec-12 .play, #video-sec-12 .close-video').click(function(){
                 $('#video-sec-12').toggleClass('active');
             });
 
