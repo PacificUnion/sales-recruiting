@@ -846,12 +846,12 @@
         <div class="form-container">
             <h4>Contact Us</h4>
             <p>Pacific Union Financial has exactly what you need to succeed. From a wide and flexible suite of loan products to a top-of-the-line CRM, we offer the best to the best. Ready to set yourself apart?</p>
-            <form action="" id="recruiting-site-form" enctype="text/plain" onclick="submitForm();">
+            <form action="" id="recruiting-site-form" enctype="text/plain" >
                 <input type="text" id="first_name"  name="first_name" value=""  required placeholder="First Name">
                 <input type="text" id="last_name" name="last_name" value=""  required  placeholder="Last Name">
                 <input type="email" id="email" name="email" value="" required  placeholder="Email Address">
                 <input type="text" id="phone" name="phone" value=""  required placeholder="Phone Number">
-                <input type="text" id="address" name="address" value=""  required  placeholder="Home Address">
+                <input type="text" id="address" name="address" value="" placeholder="Home Address">
                 <input type="text" id="city" name="city" value=""  required  placeholder="City">
                 <select id="states" name="state" required placeholder="State">
                     <option value="" disabled selected>State</option>
@@ -908,7 +908,7 @@
                     <option value="WY">Wyoming</option>
                 </select>
                 <input pattern="[0-9]*" maxlength="5" required name="zip" id="zip" placeholder="Zip Code">
-                <div class="button" id="submit-contact-us">Submit</div>
+                <div class="button" id="submit-contact-us" onclick="submitForm();">Submit</div>
             </form>
         </div>
         <div class="thank-you">
