@@ -8,7 +8,7 @@ $(function() {
         //Navigation
         menu: false,
         lockAnchors: false,
-        anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'],
+        anchors: ['Home', 'Our-History', '2016', '2015', '2014', '2013', '2012', '2011', '2008', '2004', 'Vision', 'Benefits', 'Products', 'Contact-Us'],
         navigation: true, //needed for navigation on timeline
         navigationPosition: 'left',
         navigationTooltips: [],
