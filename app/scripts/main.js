@@ -208,6 +208,11 @@ $(function() {
                 // $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
                 $('.slide-12-video').css('display', 'none');
             }
+            if(index == 1 || index == 9 || index ==  11 || index == 12){
+                $('nav .nav-title a').css('text-shadow', 'none');
+            }else{
+                $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
+            }
             // if(index == 12){
             //     $('.slide-12-video').css('display', 'block'); 
             // }
