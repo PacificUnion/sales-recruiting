@@ -120,10 +120,12 @@ $(function() {
             }
             if(index == 11 && nextIndex == 12 ){
                 $('.slide-12-video').css('display', 'block'); 
+                $('video').get(0).play();
             }
             if(index == 13 && nextIndex == 12 ){
                 setTimeout(function(){
                     $('.slide-12-video').css('display', 'block'); 
+                    $('video').get(0).play();
                 }, 300);
             }
             
@@ -222,6 +224,12 @@ $(function() {
             if(index == 11){
                 // $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
                 $('.slide-12-video').css('display', 'none');
+            }
+            if(index == 12 ){
+                $('.slide-12-video').css('display', 'block');
+                $('video').get(0).play();
+            }else{
+                 $('video').get(0).pause();
             }
             if(index == 1 || index == 9 || index ==  11 || index == 12){
                 $('nav .nav-title a').css('text-shadow', 'none');
