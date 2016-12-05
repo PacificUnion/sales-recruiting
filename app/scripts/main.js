@@ -10,7 +10,7 @@ $(function() {
         function animate() {
             TweenMax.set('.house-icon-line', {drawSVG: 0});
             TweenMax.to('.house-icon-line', 3, {drawSVG: true});
-            TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 4});
+            TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
         }
 
         animate();
