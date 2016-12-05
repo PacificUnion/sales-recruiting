@@ -24,6 +24,11 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+
+        <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
+        
+    <script src="scripts/DrawSVGPlugin.min.js"></script>
     </head>
     <body>
     <!--[if lt IE 10]>
@@ -31,7 +36,7 @@
     <![endif]-->
 
         <!-- loader/spinner -->
-      <!--   <div class="spinner_hol">
+        <div class="spinner_hol">
             <div class="spinner">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 612 792" style="enable-background:new 0 0 612 792;" xml:space="preserve">
@@ -41,7 +46,7 @@
                         l-55.7-29.7l-107.3,60.3l-21.7-1l-0.3,9.3l22,3.3l18-10v135l5,2.3L232,361.3l84.7-48l105.3,55h-16l-0.3-4.3"/>
                 </svg>
             </div>
-        </div> -->
+        </div>
 
         <!-- navigation -->
         <nav class="nav">
@@ -747,7 +752,7 @@
             <img src="./images/SVGs/Glassdoor-Rating.svg" alt="" class="badge">
             <img src="./images/SVGs/Mortgage-Lender.svg" alt="" class="badge">
         </div>
-        <div class="button" id="contact-us">Get in touch today</div>
+        <div class="button" id="contact-button">Get in touch today</div>
      
 
         <footer>
@@ -953,8 +958,8 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
-    <script src="/bower_components\bootstrap-sass\assets\javascripts\bootstrap\carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -962,6 +967,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

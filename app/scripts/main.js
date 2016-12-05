@@ -2,6 +2,26 @@
 
 $(function() {
 
+    // preloader
+    $(window).on('load', function(){
+        $('.spinner_hol').fadeIn('fast');
+        $('.spinner svg').css('visibility', 'visible');
+
+        function animate() {
+            TweenMax.set('.house-icon-line', {drawSVG: 0});
+            TweenMax.to('.house-icon-line', 3, {drawSVG: true});
+            TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 4});
+        }
+
+        animate();
+        setTimeout(function(){
+            $('.spinner_hol').fadeOut('slow', function(){
+                $('.spinner svg').css('visibility', 'hidden');
+                
+            });
+        }, 2000);
+    });
+
   
     $('#fullpage').fullpage({
 
@@ -106,19 +126,14 @@ $(function() {
                     $('.slide-12-video').css('display', 'block'); 
                 }, 300);
             }
-            // if(index == 11 && nextIndex == 10 ){
-            //     $('.img-block').css( 'background-image', 'url(http://fillmurray.com/700/900)' );
-            // }
+            
         },
         
-        // $preloadImages = function() {
-        //     for (var i = 0; i < arguments.length; i++) {
-        //         $("<img />").attr("src", arguments[i]);
-        //     }
-        // }
-        // $.preloadImages("images/timeline/today.jpg","images/timeline/2016.jpg","images/timeline/2015.jpg","images/timeline/2014.jpg","images/timeline/2013.jpg","images/timeline/2012.jpg","images/timeline/2011.jpg","images/timeline/2008.jpg","images/timeline/2004.jpg");
+     
 
         afterLoad: function(anchorLink, index){
+
+
             if(index == 1 ){
                 $('video').get(1).play();
 
@@ -213,10 +228,7 @@ $(function() {
             }else{
                 $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
             }
-            // if(index == 12){
-            //     $('.slide-12-video').css('display', 'block'); 
-            // }
-           
+                     
         },
        
         afterResize: function(){},
@@ -246,7 +258,6 @@ $(function() {
             $('.dot-flexkey, .modal-flexkey .close-modal, .product-flexkey').click(function(){
                 $('.modal-flexkey').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');   
-                // $('.modal-bg').addClass('blue');             
             });
             $('.modal-flexkey .next').click(function(){
                 $('.modal-fha').addClass('active'),
@@ -260,7 +271,6 @@ $(function() {
             $('.dot-fha, .modal-fha .close-modal, .product-fha').click(function(){
                 $('.modal-fha').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
-                // $('.modal-bg').addClass('green');
             });
             $('.modal-fha .next').click(function(){
                 $('.modal-va').addClass('active'),
@@ -274,7 +284,6 @@ $(function() {
             $('.dot-va, .modal-va .close-modal, .product-va').click(function(){
                 $('.modal-va').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
-                // $('.modal-bg').addClass('gray');
             });
             $('.modal-va .next').click(function(){
                 $('.modal-conv').addClass('active'),
@@ -287,8 +296,7 @@ $(function() {
             // conv
             $('.dot-conv, .modal-conv .close-modal, .product-conv').click(function(){
                 $('.modal-conv').toggleClass('active');
-                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');    
-                // $('.modal-bg').addClass('blue');        
+                $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
             });$('.modal-conv .next').click(function(){
                 $('.modal-usda').addClass('active'),
                 $('.modal-conv').removeClass('active');
@@ -301,7 +309,6 @@ $(function() {
             $('.dot-usda, .modal-usda .close-modal, .product-usda').click(function(){
                 $('.modal-usda').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
-                // $('.modal-bg').addClass('green');
             });
             $('.modal-usda .next').click(function(){
                 $('.modal-jumbo').addClass('active'),
@@ -315,7 +322,6 @@ $(function() {
             $('.dot-jumbo, .modal-jumbo .close-modal, .product-jumbo').click(function(){
                 $('.modal-jumbo').toggleClass('active');
                 $('.nav-local, #nav-icon, .nav-wrapper').toggleClass('hide-up');
-                // $('.modal-bg').addClass('gray');
             });
             $('.modal-jumbo .next').click(function(){
                 $('.modal-flexkey').addClass('active'),
