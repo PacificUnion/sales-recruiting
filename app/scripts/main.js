@@ -53,7 +53,7 @@ $(function() {
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '.nav-wrapper, .menu, .form-contact, .arrow-mobile, .video-overlay, .modal',
+        fixedElements: '.nav-wrapper, .menu, .form-contact, .arrow-mobile, .video-overlay, .modal, .spinner_hol',
         responsiveWidth: 768,
         responsiveHeight: 0,
         responsiveSlides: null,
@@ -111,9 +111,9 @@ $(function() {
             // }
         },
         
-        // $.preloadImages = function() {
+        // $preloadImages = function() {
         //     for (var i = 0; i < arguments.length; i++) {
-        //         $('.img-block').attr("src", arguments[i]);
+        //         $("<img />").attr("src", arguments[i]);
         //     }
         // }
         // $.preloadImages("images/timeline/today.jpg","images/timeline/2016.jpg","images/timeline/2015.jpg","images/timeline/2014.jpg","images/timeline/2013.jpg","images/timeline/2012.jpg","images/timeline/2011.jpg","images/timeline/2008.jpg","images/timeline/2004.jpg");
