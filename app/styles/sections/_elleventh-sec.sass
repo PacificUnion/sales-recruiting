@@ -1,7 +1,10 @@
 .elleventh-sec
-	background-image: url(../images/john-hummel-image.jpg) 
-	background-size: cover
-	background-position: center 
+	.mobile-img
+		top: 0
+		position: absolute
+		width: 100%
+		left: 50%
+		margin-left: -50%
 	.event
 		background-color: transparent 	
 	.play
@@ -16,10 +19,7 @@
 			transform: scale(0.95)
 		 
 	.content, .sub-content
-		// position: absolute
-		
-
-		color: $white
+		color: $text-gray
 		font-family: 'Gotham Book'
 		font-size: 1.5rem
 		left: 0
@@ -27,17 +27,26 @@
 		width: 120%
 		margin-left: -10%
 		line-height: 34px 
+		
 	.sub-content
-		font-size: 17px
-		
-		
+		font-size: 1rem
+		font-family: 'Gotham Bold'
+		margin-bottom: 100px 
+		 
+	.content
+		margin-top: 200px
+		padding-top: 15%
+
 	.signature
-	 	color: #fff
+	 	color: $green
 	 	font-family: 'Jenna Sue'
 	 	font-size: 41px
 	 	text-align: center
 	 	line-height: 60px
 	 	
+	.arrow
+		top: 90%
+		z-index: 5
 	&.active
 	 	.play
 
@@ -46,6 +55,7 @@
 	.elleventh-sec
 		background-image: url(../images/john-hummel-image.jpg) 
 		background-size: cover
+		background-position: center 
 		.event
 			background-color: transparent 	
 		.play
@@ -60,7 +70,7 @@
 				transform: scale(0.95)
 			 
 		.content, .sub-content
-			color: #fff
+			color: $white
 			font-family: 'Gotham Book'
 			font-size: 18px
 			text-align: center
