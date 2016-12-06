@@ -340,7 +340,7 @@ $(function() {
                 $('.modal-jumbo').removeClass('active');
             });
         
-            $('#contact-us').click(function(){
+            $('#contact-button').click(function(){
                 $('.form-contact').addClass('active');
             });
             $('.form-contact .close').click(function(){
