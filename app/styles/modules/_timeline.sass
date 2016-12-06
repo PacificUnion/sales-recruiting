@@ -50,8 +50,8 @@
 	margin-top: -2.5rem
 
 .divider
-	// stroke: $green
-	stroke: $text-gray
+	stroke: $green
+	// stroke: $text-gray
 	stroke-width: 4
 	fill: none
 	stroke-dasharray: 1000
@@ -65,15 +65,14 @@ p, h1
 
 h1
 	font-family: 'Droid Serif'
-	// color: $dark-gray
-	color: #686868
+	color: $dark-gray
 	font-size: 50px 
 p
 	font-family: 'Gotham Book' 
-	// color: $dark-gray
-	color: #686868
+	color: $dark-gray
 	font-size: 16px
 	line-height: 3rem 
+	
 	 
 
 .section	
@@ -93,16 +92,33 @@ p
 	width: 100%
 	left: 0
 	
-.mobile-img
-	width: 142%
-	height: 200px
-	margin-left: -21%
-	background-size: cover
-	background-position: center
-	background-repeat: no-repeat   
-	&-1
-		background-image: url(http://fillmurray.com/400/300) 
+.arrow
+	bottom: 30%
+	
+	
+
+// timeline sections
+#sec-2
+	.event
+		margin-top: 50%
+	p
+		margin-bottom: 89%
+#sec-5
+	.arrow
+		bottom: 23%
+#sec-10
+	.arrow 
+		bottom: 5%
+
+
+#sec-3, #sec-4, #sec-5, #sec-6, #sec-7, #sec-8, #sec-9, #sec-10
+	p
+		margin-bottom: 100px
+	.event
+		margin-top: 28% 
 		
+	
+			
 @media screen and (min-width: 768px)
 	.event
 		width: 33%
