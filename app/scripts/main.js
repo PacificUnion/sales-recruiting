@@ -1,6 +1,4 @@
-
-
-$(function() {
+// $(document).ready(
 
     // preloader
     $(window).on('load', function(){
@@ -11,6 +9,7 @@ $(function() {
             TweenMax.set('.house-icon-line', {drawSVG: 0});
             TweenMax.to('.house-icon-line', 3, {drawSVG: true});
             TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
+            console.log('I am animating');
         }
 
         animate();
@@ -21,6 +20,9 @@ $(function() {
             });
         }, 2000);
     });
+
+$(function() {
+
 
   
     $('#fullpage').fullpage({
@@ -357,3 +359,5 @@ $(function() {
    
 });
 
+
+// );  //end document.ready
