@@ -1,25 +1,23 @@
-// $(document).ready(
+// preloader
+$(window).on('load', function(){
+    $('.spinner_hol').fadeIn('fast');
+    $('.spinner svg').css('visibility', 'visible');
 
-    // preloader
-    $(window).on('load', function(){
-        $('.spinner_hol').fadeIn('fast');
-        $('.spinner svg').css('visibility', 'visible');
+    function animate() {
+        TweenMax.set('.house-icon-line', {drawSVG: 0});
+        TweenMax.to('.house-icon-line', 3, {drawSVG: true});
+        TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
+        console.log('I am animating');
+    }
 
-        function animate() {
-            TweenMax.set('.house-icon-line', {drawSVG: 0});
-            TweenMax.to('.house-icon-line', 3, {drawSVG: true});
-            TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
-            console.log('I am animating');
-        }
-
-        animate();
-        setTimeout(function(){
-            $('.spinner_hol').fadeOut('slow', function(){
-                $('.spinner svg').css('visibility', 'hidden');
-                
-            });
-        }, 2000);
-    });
+    animate();
+    setTimeout(function(){
+        $('.spinner_hol').fadeOut('slow', function(){
+            $('.spinner svg').css('visibility', 'hidden');
+            
+        });
+    }, 2000);
+});
 
 $(function() {
 
@@ -358,6 +356,3 @@ $(function() {
 
    
 });
-
-
-// );  //end document.ready
