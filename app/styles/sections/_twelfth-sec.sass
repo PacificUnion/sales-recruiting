@@ -19,10 +19,10 @@
 		margin-top: 170%
 			
 
-	h1, h3
-		opacity: 0
-		transform: scale(0.3)
-		transition: all 300ms ease-in 0.7s
+	// h1, h3
+	// 	opacity: 0
+	// 	transform: scale(0.3)
+	// 	transition: all 300ms ease-in 0.7s
 	.list-container
 		position: relative
 		width: 130%
@@ -47,7 +47,7 @@
 				font-size: 16px
 				padding: 0.5rem 0
 				position: relative
-				opacity: 0
+				// opacity: 0
 							 
 				span
 					display: inline-block
@@ -88,30 +88,30 @@
 		width: 100%
 		left: 0
 		
-	&.active
-		.left
-			&::before, &::after
-				width: 100%
-				height: 100%
-			&::before
-				height: 100%
-				border-right-color: #a1a1a1
-				transition: height 0.5s ease-out 1.5s
-			&::after
-				transition: border-color 0s ease-out 0.5s
+	// &.active
+	// 	.left
+	// 		&::before, &::after
+	// 			width: 100%
+	// 			height: 100%
+	// 		&::before
+	// 			height: 100%
+	// 			border-right-color: #a1a1a1
+	// 			transition: height 0.5s ease-out 1.5s
+	// 		&::after
+	// 			transition: border-color 0s ease-out 0.5s
 			
-		h1, h3
-			opacity: 1
-			transform: scale(1)
-		li
-			@for $i from 1 through 9
-				&:nth-child(#{$i})
-					animation: 
-						name: list-drop 
-						delay: 1s
-						duration: 150ms * $i
-						timing-function: ease-in
-						fill-mode: forwards
+	// 	h1, h3
+	// 		opacity: 1
+	// 		transform: scale(1)
+	// 	li
+	// 		@for $i from 1 through 9
+	// 			&:nth-child(#{$i})
+	// 				animation: 
+	// 					name: list-drop 
+	// 					delay: 1s
+	// 					duration: 150ms * $i
+	// 					timing-function: ease-in
+	// 					fill-mode: forwards
 	.arrow
 		z-index: 5
 		bottom: 0
@@ -155,7 +155,6 @@
 				font-family: 'Gotham Book'
 				color: #686868
 				list-style: none
-				padding:  
 				// list-style: circle url('../images/checkmark-bullet.png')
 				h3
 					font-family: 'Gotham Bold'
