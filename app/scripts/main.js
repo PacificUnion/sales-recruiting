@@ -109,7 +109,7 @@ $(function() {
                 }, 550);
             }
             if(index == 12 && nextIndex == 13 ){
-                $('.img-block').css('background-image', 'url(../images/screenshots/pace-loop.png)')
+                $('.img-block').css('background-image', 'url(../images/pace-loop.jpg)')
                     $('.slide-12-video').css('display', 'none'); 
                 // setTimeout(function(){
 
