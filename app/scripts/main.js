@@ -94,26 +94,19 @@ $(function() {
         //events
         onLeave: function(index, nextIndex, direction){
 
-            // if(index == '1' && nextIndex == '2' ){
-            //      $('.img-block').css('z-index', '-2');
-
-            //      console.log(index + ' ' + nextIndex);
-            // }
-
             if(index == 2 && nextIndex == 1 ){
                
                 $('video').get(1).play();
                 $('#fp-nav').css('display', 'none');
-                $('.timeline-dates').css('display', 'none');  
+                $('.timeline-dates').css('opacity', '0');  
                 $('.logo-wrapper').css('display', 'block');
 
             }
 
-
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('display', 'none'); 
+                $('.timeline-dates').css('opacity', '0'); 
             }
             if(index == 12 && nextIndex == 11 ){
                 setTimeout(function(){
@@ -122,10 +115,7 @@ $(function() {
             }
             if(index == 12 && nextIndex == 13 ){
                 $('.img-block').css('background-image', 'url(../images/pace-loop.jpg)')
-                    $('.slide-12-video').css('display', 'none'); 
-                // setTimeout(function(){
-
-                // }, 300);
+                $('.slide-12-video').css('display', 'none'); 
             }
             if(index == 11 && nextIndex == 12 ){
                 $('.slide-12-video').css('display', 'block'); 
@@ -144,7 +134,6 @@ $(function() {
 
         afterLoad: function(anchorLink, index){
 
-
             if(index == 1 ){
                 $('video').get(1).play();
 
@@ -153,10 +142,10 @@ $(function() {
             }
             if(index == 1 || index >= 11){
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('display', 'none');            
+                $('.timeline-dates').css('opacity', '0');            
             }else{
                 $('#fp-nav').css('display', 'block');
-                $('.timeline-dates').css('display', 'block');
+                $('.timeline-dates').css('opacity', '1');
             }
             if(index == 2){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
