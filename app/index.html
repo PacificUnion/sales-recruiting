@@ -25,13 +25,7 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
-       <!--  <style>
-            @media all and (-ms-high-contrast:none)
-             {
-             .spinner_hol { display: none } /* IE10 */
-             *::-ms-backdrop, .spinner_hol { display: none }  /* IE11 */
-             }
-        </style> -->
+      
     </head>
     <body>
     <!--[if IE]>
@@ -137,6 +131,12 @@
         </div>
        
         
+
+        <!-- logo -->
+        <a href="http://www.pacificunionfinancial.com/" class="logo-wrapper">
+            <img src="./images/SVGs/pacific-union-financial-logo.svg" alt="Pacific Union Financial logo" class="logo">
+        </a> 
+        
         <div class="img-block">            
             <div class="video-wrapper slide-12-video" style="display: none;" >
                 <video preload="none" autoplay="true" loop poster="./images/pace-loop.jpg" muted> 
@@ -145,11 +145,6 @@
                 </video>
             </div>
         </div>
-
-        <!-- logo -->
-        <a href="http://www.pacificunionfinancial.com/" class="logo-wrapper">
-            <img src="./images/SVGs/pacific-union-financial-logo.svg" alt="Pacific Union Financial logo" class="logo">
-        </a> 
 
         <div id="fullpage">
             <!-- First Section -->
@@ -969,7 +964,10 @@
     
     </div> <!--  end fullpage  -->
     
-     <script>
+
+ 
+
+    <script>
          function submitForm() {
             var form = $('#recruiting-site-form');
             var formData = $(form).serialize();

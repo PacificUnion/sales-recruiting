@@ -15,7 +15,7 @@ $(window).on('load', function(){
             $('.spinner svg').css('visibility', 'hidden');
             
         });
-    }, 2000);
+    }, 1000);
 });
 
 $(function() {
@@ -29,6 +29,16 @@ $(function() {
         $('.spinner_hol').css('display', 'none');
     }
 });
+
+$(function() {
+    $('slide-12-video video source').each(function() {
+        var sourceFile = $(this).attr('data-src');
+        $(this).attr('src', sourceFile)
+        var video = this.parentElement;
+        video.load();   
+    });
+})
+
 
 $(function() {
   
