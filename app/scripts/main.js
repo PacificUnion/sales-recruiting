@@ -47,7 +47,7 @@ $(function() {
         //Navigation
         menu: false,
         lockAnchors: false,
-        anchors: ['Home', 'Our-History', '2016', '2015', '2014', '2013', '2012', '2011', '2008', '2004', 'Vision', 'Benefits', 'Products', 'Contact-Us'],
+        anchors: ['Home','Vision', 'Our-History', '2016', '2015', '2014', '2013', '2012', '2011', '2008', '2004', 'Benefits', 'Products', 'Contact-Us'],
         navigation: true, //needed for navigation on timeline
         navigationPosition: 'left',
         navigationTooltips: [],
@@ -104,7 +104,7 @@ $(function() {
         //events
         onLeave: function(index, nextIndex, direction){
 
-            if(index == 2 && nextIndex == 1 ){
+            if(index == 3 && nextIndex == 1 ){
                
                 $('video').get(1).play();
                 $('#fp-nav').css('display', 'none');
@@ -121,11 +121,13 @@ $(function() {
             if(index == 12 && nextIndex == 11 ){
                 setTimeout(function(){
                     $('.slide-12-video').css('display', 'none'); 
+                    $('video').get(0).pause();
                 }, 550);
             }
             if(index == 12 && nextIndex == 13 ){
                 $('.img-block').css('background-image', 'url(../images/pace-loop.jpg)')
                 $('.slide-12-video').css('display', 'none'); 
+                $('video').get(0).pause();
             }
             if(index == 11 && nextIndex == 12 ){
                 $('.slide-12-video').css('display', 'block'); 
@@ -150,14 +152,14 @@ $(function() {
             }else{
                 $('.logo-wrapper').css('display', 'none');                
             }
-            if(index == 1 || index >= 11){
+            if( index <= 2 || index >= 12){
                 $('#fp-nav').css('display', 'none'); 
                 $('.timeline-dates').css('opacity', '0');            
             }else{
                 $('#fp-nav').css('display', 'block');
                 $('.timeline-dates').css('opacity', '1');
             }
-            if(index == 2){
+            if(index == 3){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
                 $('#sec-2 .svg-container').addClass('active'),
                 $('.timeline-dates .first').addClass('active');
@@ -165,7 +167,7 @@ $(function() {
             }else{
                 $('.timeline-dates .first').removeClass('active');
             }
-            if(index == 3){
+            if(index == 4){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2016.jpg)' ),
                 $('#sec-3 .svg-container').addClass('active');
                 $('.timeline-dates .second').addClass('active');
@@ -173,7 +175,7 @@ $(function() {
                 $('#sec-3 .svg-container').removeClass('active'),
                 $('.timeline-dates .second').removeClass('active');
             }
-            if(index == 4){
+            if(index == 5){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2015.jpg)' ),
                 $('#sec-4 .svg-container').addClass('active'),
                 $('.timeline-dates .third').addClass('active');
@@ -181,7 +183,7 @@ $(function() {
                 $('#sec-4 .svg-container').removeClass('active'),
                 $('.timeline-dates .third').removeClass('active');
             }
-            if(index == 5){
+            if(index == 6){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2014.jpg)' ),
                 $('#sec-5 .svg-container').addClass('active'),
                 $('.timeline-dates .fourth').addClass('active');
@@ -189,7 +191,7 @@ $(function() {
                 $('#sec-5 .svg-container').removeClass('active'),
                 $('.timeline-dates .fourth').removeClass('active');
             }
-            if(index == 6){
+            if(index == 7){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2013.jpg)' ),
                 $('#sec-6 .svg-container').addClass('active'),
                 $('.timeline-dates .fifth').addClass('active');
@@ -197,7 +199,7 @@ $(function() {
                 $('#sec-6 .svg-container').removeClass('active'),
                 $('.timeline-dates .fifth').removeClass('active');
             }
-            if(index == 7){
+            if(index == 8){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2012.jpg)' ),
                 $('#sec-7 .svg-container').addClass('active'),
                 $('.timeline-dates .sixth').addClass('active');
@@ -205,7 +207,7 @@ $(function() {
                 $('#sec-7 .svg-container').removeClass('active'),
                 $('.timeline-dates .sixth').removeClass('active');
             }
-            if(index == 8){
+            if(index == 9){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2011.jpg)' ),
                 $('#sec-8 .svg-container').addClass('active'),
                 $('.timeline-dates .seventh').addClass('active');
@@ -213,7 +215,7 @@ $(function() {
                 $('#sec-8 .svg-container').removeClass('active'),
                 $('.timeline-dates .seventh').removeClass('active');
             }
-            if(index == 9){
+            if(index == 10){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2008.jpg)' ),
                 $('#sec-9 .svg-container').addClass('active'),
                 $('.timeline-dates .eigth').addClass('active');
@@ -221,7 +223,7 @@ $(function() {
                 $('#sec-8 .svg-container').removeClass('active'),
                 $('.timeline-dates .eigth').removeClass('active');
             }
-            if(index == 10){
+            if(index == 11){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2004.jpg)' ),
                 $('#sec-10 .svg-container').addClass('active'),
                 $('.timeline-dates .ninth').addClass('active');
