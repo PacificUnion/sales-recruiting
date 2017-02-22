@@ -47,7 +47,7 @@ $(function() {
         //Navigation
         menu: false,
         lockAnchors: false,
-        anchors: ['Home','Vision', 'Our-History', '2016', '2015', '2014', '2013', '2012', '2011', '2008', '2004', 'Benefits', 'Products', 'Contact-Us'],
+        anchors: ['Home','Vision', 'Our-History', '2008', '2011', '2012', '2013', '2014', '2015', '2016', 'Today', 'Benefits', 'Products', 'Contact-Us'],
         navigation: true, //needed for navigation on timeline
         navigationPosition: 'left',
         navigationTooltips: [],
@@ -160,35 +160,36 @@ $(function() {
                 $('.timeline-dates').css('opacity', '1');
             }
             if(index == 3){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
-                $('#sec-2 .svg-container').addClass('active'),
-                $('.timeline-dates .first').addClass('active');
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2004.jpg)' ),
+                $('#sec-10 .svg-container').addClass('active'),
                 $('.logo-wrapper').css('display', 'none');
+                $('.timeline-dates .first').addClass('active');
             }else{
+                $('#sec-10 .svg-container').removeClass('active'),
                 $('.timeline-dates .first').removeClass('active');
-            }
+            }    
             if(index == 4){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2016.jpg)' ),
-                $('#sec-3 .svg-container').addClass('active');
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2008.jpg)' ),
+                $('#sec-9 .svg-container').addClass('active');
                 $('.timeline-dates .second').addClass('active');
             }else{
-                $('#sec-3 .svg-container').removeClass('active'),
+                $('#sec-9 .svg-container').removeClass('active'),
                 $('.timeline-dates .second').removeClass('active');
             }
             if(index == 5){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2015.jpg)' ),
-                $('#sec-4 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2011.jpg)' ),
+                $('#sec-8 .svg-container').addClass('active'),
                 $('.timeline-dates .third').addClass('active');
             }else{
-                $('#sec-4 .svg-container').removeClass('active'),
+                $('#sec-8 .svg-container').removeClass('active'),
                 $('.timeline-dates .third').removeClass('active');
             }
             if(index == 6){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2014.jpg)' ),
-                $('#sec-5 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2012.jpg)' ),
+                $('#sec-7 .svg-container').addClass('active'),
                 $('.timeline-dates .fourth').addClass('active');
             }else{
-                $('#sec-5 .svg-container').removeClass('active'),
+                $('#sec-7 .svg-container').removeClass('active'),
                 $('.timeline-dates .fourth').removeClass('active');
             }
             if(index == 7){
@@ -200,37 +201,38 @@ $(function() {
                 $('.timeline-dates .fifth').removeClass('active');
             }
             if(index == 8){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2012.jpg)' ),
-                $('#sec-7 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2014.jpg)' ),
+                $('#sec-5 .svg-container').addClass('active'),
                 $('.timeline-dates .sixth').addClass('active');
             }else{
-                $('#sec-7 .svg-container').removeClass('active'),
+                $('#sec-5 .svg-container').removeClass('active'),
                 $('.timeline-dates .sixth').removeClass('active');
             }
             if(index == 9){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2011.jpg)' ),
-                $('#sec-8 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2015.jpg)' ),
+                $('#sec-4 .svg-container').addClass('active'),
                 $('.timeline-dates .seventh').addClass('active');
             }else{
-                $('#sec-8 .svg-container').removeClass('active'),
+                $('#sec-4 .svg-container').removeClass('active'),
                 $('.timeline-dates .seventh').removeClass('active');
             }
             if(index == 10){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2008.jpg)' ),
-                $('#sec-9 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/2016.jpg)' ),
+                $('#sec-3 .svg-container').addClass('active'),
                 $('.timeline-dates .eigth').addClass('active');
             }else{
-                $('#sec-8 .svg-container').removeClass('active'),
+                $('#sec-3 .svg-container').removeClass('active'),
                 $('.timeline-dates .eigth').removeClass('active');
             }
             if(index == 11){
-                $('.img-block').css( 'background-image', 'url(./images/timeline/2004.jpg)' ),
-                $('#sec-10 .svg-container').addClass('active'),
+                $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
+                $('#sec-2 .svg-container').addClass('active'),
                 $('.timeline-dates .ninth').addClass('active');
             }else{
-                $('#sec-10 .svg-container').removeClass('active'),
                 $('.timeline-dates .ninth').removeClass('active');
             }
+
+                
             if(index == 11){
                 // $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
                 $('.slide-12-video').css('display', 'none');
