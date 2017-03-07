@@ -37,7 +37,7 @@ $(function() {
         var video = this.parentElement;
         video.load();   
     });
-})
+});
 
 
 $(function() {
