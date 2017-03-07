@@ -48,8 +48,13 @@
 		bottom: 5%
 		z-index: 5
 		top: auto
+	.open-quote, .close-quote
+		&.mobile
+			margin-bottom: 20px 
+			display: inline-block
+			width: 21px
+			height: auto
 	
-
 @media screen and (min-width: 768px)
 	.elleventh-sec
 		background-image: url(../images/john-hummel-image.jpg) 
@@ -90,6 +95,15 @@
 		 	font-size: 41px
 		 	text-align: center
 		 	line-height: 60px
+		 
+		.open-quote, .close-quote
+			&.desktop
+				margin-bottom: 20px 
+				display: inline-block
+			&.mobile
+				display: none
+		// .close-quote
+		// 	margin-top: 20px
 		 	
 		// &.active
 		//  	.play
