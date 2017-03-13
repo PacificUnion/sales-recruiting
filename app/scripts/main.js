@@ -361,7 +361,7 @@ $(function() {
                 $('.modal-jumbo').removeClass('active');
             });
         
-            $('#contact-button').click(function(){
+            $('#contact-button, .nav-contact').click(function(){
                 $('.form-contact').addClass('active');
             });
             $('.form-contact .close').click(function(){
