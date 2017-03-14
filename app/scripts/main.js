@@ -120,7 +120,7 @@ $(function() {
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('opacity', '0'); 
+                $('.timeline-dates').css('display', 'none'); 
             }
             if(index == 12 && nextIndex == 11 ){
                 setTimeout(function(){
@@ -158,10 +158,10 @@ $(function() {
             }
             if( index <= 2 || index >= 12){
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('opacity', '0');            
+                $('.timeline-dates').css('display', 'none');            
             }else{
                 $('#fp-nav').css('display', 'block');
-                $('.timeline-dates').css('opacity', '1');
+                $('.timeline-dates').css('display', 'block');
             }
             if(index == 3){
                 $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
