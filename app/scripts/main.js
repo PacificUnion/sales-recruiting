@@ -152,9 +152,13 @@ $(function() {
 
             if(index == 1 ){
                 $('video').get(1).play();
-
             }else{
                 $('.logo-wrapper').css('display', 'none');                
+            }
+            if(index == 2){
+                $('.local a[href="#Vision"]').addClass('active');
+            }else{
+                $('.local a[href="#Vision"]').removeClass('active');
             }
             if( index <= 2 || index >= 12){
                 $('#fp-nav').css('display', 'none'); 
@@ -164,11 +168,13 @@ $(function() {
                 $('.timeline-dates').css('display', 'block');
             }
             if(index == 3){
+                $('.local a[href="#Our-History"]').addClass('active');
                 $('.img-block').css( 'background-image', 'url(./images/timeline/today.jpg)' ),
                 $('#sec-10 .svg-container').addClass('active'),
                 $('.logo-wrapper').css('display', 'none');
                 $('.timeline-dates .first').addClass('active');
             }else{
+                $('.local a[href="#Our-History"]').removeClass('active');
                 $('#sec-10 .svg-container').removeClass('active'),
                 $('.timeline-dates .first').removeClass('active');
             }    
@@ -242,10 +248,17 @@ $(function() {
                 $('.slide-12-video').css('display', 'none');
             }
             if(index == 12 ){
+                $('.local a[href="#Benefits"]').addClass('active');
                 $('.slide-12-video').css('display', 'block');
                 $('video').get(0).play();
             }else{
+                $('.local a[href="#Benefits"]').removeClass('active');
                  $('video').get(0).pause();
+            }
+            if(index == 13){
+                $('.local a[href="#Products"]').addClass('active');
+            }else{
+                $('.local a[href="#Products"]').removeClass('active');
             }
             if(index == 1 || index == 9 || index ==  11 || index == 12){
                 $('nav .nav-title a').css('text-shadow', 'none');
