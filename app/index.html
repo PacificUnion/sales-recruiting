@@ -10,7 +10,67 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <style>
+            .spinner_hol{
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: #f1f1f1;
+                z-index: 5000;
+                font-size: 1rem;
+                transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+            }
+            .spinner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -20rem;
+                margin-left: -20rem;
+                width: 40rem;
+                height: 40rem;
+            }
+            .spinner svg {
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+            }
+            .spinner svg .house-icon-line {
+                stroke: #39B54A;
+                fill: none;
+                stroke-width: 3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+            }
+            .spinner svg .house-icon-circle {
+                fill: none;
+                stroke: #1465A5;
+                stroke-width: 3;
+                stroke-miterlimit: 10;
+            }
+            .house-icon-line{
+                stroke-dashoffset: 2502;
+                stroke-dasharray: 2502;
+                animation: dash 3s linear alternate infinite;
+            }
+            .hide{
+                visibility: hidden;
+                opacity: 0;
+            }
+            @keyframes dash{
+                from {
+                    stroke-dashoffset: 2502; 
+                }
+                to {
+                    stroke-dashoffset: 0; 
+                }
+            }
+        </style>
 
+        
+        <!-- End Spinner -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -21,9 +81,9 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/index.css">
         <!-- endbuild -->
-
+        
         <!-- build:js scripts/vendor/modernizr.js -->
-        <!-- <script async src="/bower_components/modernizr/modernizr.js"></script> -->
+
         <!-- endbuild -->
         
          <!-- Google Tag Manager -->
@@ -33,8 +93,10 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-K65R3M');</script>
         <!-- End Google Tag Manager -->
+
+
     </head>
-    <body>
+    <body onload="spinner();">
     <!--[if IE]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -967,8 +1029,33 @@
         </div>
     </div>
     
-    </div> <!--  end fullpage  -->
+    </div> <!--  end fullpage  --> 
+    <script>
+        var spinTimer;
 
+        function spinner(){
+            var spinTimer = setTimeout(fadeOut(el), 3000); 
+        } 
+
+        var el = document.querySelector('.spinner_hol');
+
+        // fade out
+        function fadeOut(el){
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= .1) < 0) {
+                    // el.style.display = "none";
+                    el.className += " hide";
+                } else {
+                    requestAnimationFrame(fade);
+                    // el.style.display = "none";
+                       el.className += " hide";
+
+                }
+            })();
+        }
+    </script>
     <script>
          function submitForm() {
             var form = $('#recruiting-site-form');
@@ -1006,8 +1093,8 @@
 
     <!-- Deffered styles -->
     <noscript id="deferred-styles">
-      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=3.0.3"/>
-      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.3"/>
+      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=3.0.4"/>
+      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.4"/>
     </noscript>
     <script>
         var loadDeferredStyles = function() {
@@ -1027,7 +1114,6 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -1036,7 +1122,6 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     
