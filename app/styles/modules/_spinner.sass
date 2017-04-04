@@ -7,14 +7,14 @@
     background: #f1f1f1
     z-index: 5000
     font-size: 1rem
+    opacity: 1
+    visibility: visible
     transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
 
 @media (max-width: 800px) 
     .spinner_hol 
         font-size: 15px
     
-
-
 .spinner 
     position: absolute
     top: 50%
@@ -30,7 +30,6 @@
     height: 100%
     // visibility: hidden
 
-
 .spinner svg .house-icon-line 
     stroke: #39B54A
     fill: none
@@ -45,4 +44,8 @@
     stroke: #1465A5
     stroke-width: 3
     stroke-miterlimit: 10
+
+.hide
+    visibility: hide
+    opacity: 0 
 

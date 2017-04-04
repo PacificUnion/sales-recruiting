@@ -20,6 +20,8 @@
                 background: #f1f1f1;
                 z-index: 5000;
                 font-size: 1rem;
+                opacity: 1;
+                visibility: visible;
                 transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
             }
             .spinner{
@@ -34,7 +36,6 @@
             .spinner svg {
                 width: 100%;
                 height: 100%;
-                visibility: hidden;
             }
             .spinner svg .house-icon-line {
                 stroke: #39B54A;
@@ -86,14 +87,13 @@
 
         <!-- endbuild -->
         
-         <!-- Google Tag Manager -->
+        <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-K65R3M');</script>
         <!-- End Google Tag Manager -->
-
 
     </head>
     <body onload="spinner();">
@@ -1029,7 +1029,8 @@
         </div>
     </div>
     
-    </div> <!--  end fullpage  --> 
+    </div> <!--  end fullpage  -->
+    <!-- Spinner -->
     <script>
         var spinTimer;
 
@@ -1093,8 +1094,8 @@
 
     <!-- Deffered styles -->
     <noscript id="deferred-styles">
-      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=3.0.4"/>
-      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.4"/>
+      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=3.0.6"/>
+      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.6"/>
     </noscript>
     <script>
         var loadDeferredStyles = function() {
@@ -1113,7 +1114,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->

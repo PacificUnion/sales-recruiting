@@ -1,15 +1,15 @@
 
-// $(function() {
-//     // ios8 test
-//     var isIOS8 = function() {
-//         var deviceAgent = navigator.userAgent.toLowerCase();
-//         return /(iphone|ipod|ipad).* os 8_/.test(deviceAgent);
-//     }
+$(function() {
+    // ios8 test
+    var isIOS8 = function() {
+        var deviceAgent = navigator.userAgent.toLowerCase();
+        return /(iphone|ipod|ipad).* os 8_/.test(deviceAgent);
+    }
 
-//     if( isIOS8() == true ){
-//         $('.spinner_hol').css('display', 'none');
-//     }
-// });
+    if( isIOS8() == true ){
+        $('.spinner_hol').css('display', 'none');
+    }
+});
 
 $(function() {
     $('slide-12-video video source').each(function() {
