@@ -261,7 +261,7 @@ $(function() {
             });
 
             $('video').get(1).play();
-            $('video').get(2).pause();
+            // $('video').get(2).pause();
 
             // $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
             //     $('#video-sec-11').toggleClass('active');

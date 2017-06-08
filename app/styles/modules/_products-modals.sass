@@ -4,14 +4,11 @@
 	left: 0
 	bottom: 0
 	width: 100%
-	height: 100vh
+	height: 100%
 	opacity: 0
 	z-index: -1
-	// background-color: red
-	 
 	transition: opacity 300ms ease-in
 	transition: background-color 2000ms ease-in
-	// transition: z-index 3000ms ease-in
 	&-jumbo, &-va
 		background-color: $dark-gray 
 	&-flexkey, &-conv
@@ -28,71 +25,78 @@
 		transform: translateY(-50%)
 	.content
 		width: 80%
-		height: 80%
 		margin-left: 10%
-		// margin-top: -25%
-		// top: 30%
 		position: absolute
-		top: 0
-		// transform: translateY(-50%)
+		top: 50%
+		transform: translateY(-50%)
 
-	h3
-		font-family: 'Droid Serif'
-		font-size: 3rem
-		text-align: center
-		padding: 0 
-		color: $white
-		margin-left: 0
-		
-	.list-container
-		color: $white
-		width: 100%
-		margin-left: 0
-		display: flex
-		flex-direction: column
-		
-		ul
-			list-style: none
-			text-align: left
-			font-family: 'Gotham Book'
-			padding: 0 1.5rem
-			margin-bottom: 0
-			h3
-				font-size: 28px 
-				margin: 0
-				padding: 0
-				padding-bottom: 20px
-			img
-				width: 2rem
-				height: 2rem
-				margin-right: 1.5rem
-				 
-			li
-				font-size: 1.3rem
-				position: relative
-				line-height: 2.5rem
-				padding-left: 3rem
-				text-indent: -3rem
-			p
-				color: $white
-				margin-left: 15% 
-	&-flexkey
+		h3
+			color: $white
+			font-size: 22px
+			text-align: center
+			
 		.list-container
-			h4, p
-				color: $white
-				margin-left: 10%
+			color: $white
+			width: 100%
+			margin-left: 0
+			display: flex
+			flex-direction: column
+			
 			ul
+				list-style: none
+				text-align: left
+				font-family: 'Gotham Book'
+				padding: 0 1.5rem
+				margin-bottom: 0
+				
+				
+				h3
+					color: $white
+					font-family: 'Gotham Book' 
+					font-size: 22px 
+					margin: 0
+					padding: 0
+					padding-bottom: 10px
+				img
+					width: 1.5rem
+					height: 1.5rem
+					margin-right: 1.5rem
+					 
 				li
-					line-height: 2.2rem
-		.left
-			width: 100%
-			left: 0
-			margin-bottom: 0 
-			padding-bottom: 0
-		.right
-			width: 100%
-			left: 0
-			padding-top: 0
+					font-size: 14px
+					position: relative
+					line-height: 24px
+					padding-left: 3rem
+					text-indent: -3rem
+					
+					
+				p
+					color: $white
+					margin-left: 15% 
+	&-flexkey
+		.content
+			.list-container
+				.left
+					margin-bottom: 17px 
+				h4, p
+					color: $white
+					margin-left: 10%
+				ul
+					li
+						line-height: 20px
+						font-size: 12px
+						&:nth-child(2)
+							padding-left: 0
+							text-indent: 0 
+		// .left
+		// 	width: 100%
+		// 	left: 0
+		// 	margin-bottom: 0 
+		// 	padding-bottom: 0
+		// .right
+		// 	width: 100%
+		// 	left: 0
+		// 	padding-top: 0
 	.close-modal
 		left: 4%
 		width: 30px
@@ -100,7 +104,7 @@
 		position: relative
 		margin: 25px auto
 		transform: rotate(0deg)
-		transition: .5s ease-in-out 300ms
+		
 		cursor: pointer
 		float: left
 		z-index: 5001
@@ -148,8 +152,6 @@
 			    top: 10px
 			    left: 0px
 			 
-				
-				
  
 .modal-bg
 	&.blue
@@ -164,75 +166,47 @@
 	.modal
 		display: block
 		
-		left: 0
-		top: 0
-		width: 100%
-		height: 100%
-		opacity: 0
-		z-index: -1
-		// background-color: transparent 
-		// transition: opacity 300ms ease-in
-		// transition: background-color 2000ms ease-in
-		// transition: z-index 3000ms ease-in
-		&-jumbo, &-va
-			background-color: $dark-gray 
-		&-flexkey, &-conv
-			background-color: $blue 
-		&-fha, &-usda
-			background-color: $green
 		.bg-img
-			position: absolute
-			height: auto
 			width: 45% 
-			left: 50%
 			margin-left: -22.5% 
-			top: 50%
-			transform: translateY(-50%)
+			
 		.content
 			width: 70%
-			height: 50%
 			margin-left: 15%
-			// margin-top: -25%
-			// top: 30%
-			position: absolute
-			top: 50%
-			transform: translateY(-50%)
-
-		h3
-			font-family: 'Droid Serif'
-			font-size: 4rem
-			text-align: left
-			padding: 0 40px
-			color: $white
-			margin-left: 15%
-			
-		.list-container
-			color: $white
-			width: 70%
-			margin-left: 15%
-			
-			display: flex
-			flex-direction: row
-			ul
-				list-style: none
+		
+			h3
+				font-family: 'Gotham Book'
+				font-size: 4rem
 				text-align: left
-				font-family: 'Gotham Book' 
-				// padding-bottom: 0
-				// margin-bottom: 10px
-				// padding-top: 0
+				padding: 0 40px
+				color: $white
+				margin-left: 15%
 				
-				img
-					width: 2rem
-					height: 2rem
-					margin-right: 1.5rem
-					 
-				li
-					font-size: 16px
-					position: relative
-					line-height: 32px
-					padding-left: 3.5rem
-					text-indent: -3.5rem
-					transition: 
+			.list-container
+				width: 70%
+				margin-left: 15%
+				display: flex
+				flex-direction: row
+				.left
+					margin-bottom: 0
+				ul
+					list-style: none
+					text-align: left
+			
+					h3
+						font-size: 3rem
+					img
+						width: 2rem
+						height: 2rem
+						margin-right: 1.5rem
+						 
+					li
+						font-size: 16px
+						position: relative
+						line-height: 32px
+						padding-left: 3.5rem
+						text-indent: -3.5rem
+						 
 			.left
 				width: 50%
 				left: 0
@@ -243,72 +217,16 @@
 		
 		.close-modal
 			top: 4%
-			width: 30px
-			height: 25px
-			position: relative
-			margin: 25px auto
-			transform: rotate(0deg)
-			transition: .5s ease-in-out 300ms
-			cursor: pointer
-			z-index: 5001
-			span
-				display: block
-				position: absolute
-				height: 4px
-				width: 100%
-				background: $white
-				border-radius: 9px
-				left: 0
-				transition: .25s ease-in-out 300ms
-				transform: rotate(0deg)
-
-			span:nth-child(1) 
-			    top: 0px
-			    transform-origin: center
-			    
-			span:nth-child(2) 
-			    top: 0px
-			    transform-origin: center
+			    		
 		.next
-			position: absolute
 			top: 45%
 			left: 90%
 			width: 4rem
 			height: 4rem
 		.prev
-			position: absolute
 			top: 45%
 			left: 10%
 			width: 4rem
 			height: 4rem
-		&.active
-			opacity: 1
-			z-index: 5000
-			
-			.close-modal
-				span:nth-child(1) 
-				    transform: rotate(45deg)
-				    top: 10px
-				    left: 0px
-				span:nth-child(2) 
-				    transform: rotate(-45deg)
-				    top: 10px
-				    left: 0px
-				 
-						
-		&-flexkey
-			.list-container
-				width: 100%
-				margin-left: 0
-				top: 50% 
-				transform: translateY(-50%)
-				position: relative
 					 
-	.modal-bg
-		&.blue
-			background-color: $blue
-		&.green
-		 	background-color: $green
-		&.gray
-		  	background-color: $gray 
-			
+

@@ -68,10 +68,9 @@
                     stroke-dashoffset: 0; 
                 }
             }
-        </style>
-
-        
+        </style>        
         <!-- End Spinner -->
+
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -79,7 +78,6 @@
         <!-- endbuild -->
 
         <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/index.css">
         <!-- endbuild -->
         
@@ -237,6 +235,33 @@
                     
                 </div>
                 <a href="#2" class="arrow light-gray"></a>
+                <!-- Spinner -->
+                <script>
+                    var spinTimer;
+
+                    function spinner(){
+                        var spinTimer = setTimeout(fadeOut(el), 3000); 
+                    } 
+
+                    var el = document.querySelector('.spinner_hol');
+
+                    // fade out
+                    function fadeOut(el){
+                        el.style.opacity = 1;
+
+                        (function fade() {
+                            if ((el.style.opacity -= .1) < 0) {
+                                // el.style.display = "none";
+                                el.className += " hide";
+                            } else {
+                                requestAnimationFrame(fade);
+                                // el.style.display = "none";
+                                   el.className += " hide";
+
+                            }
+                        })();
+                    }
+                </script>
             </div>
 
             <!-- Vision -->
@@ -570,17 +595,13 @@
                     <a href="#13" class="arrow gray desktop"></a>
                     <a href="#13" class="arrow mobile gray"></a>
                 </div>
-                <img src="./images/green-play-button.png" alt="" class="play" id="play-benefits">
-                <div class="video-overlay" id="video-sec-12">
-                    <div class="close-video">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <video preload="none" poster="./images/pace.jpg" controls >
-                        <source src="./video/PACE.mp4" type="video/mp4">
-                        <source src="./video/PACE.webm" type="video/webm" >
-                    </video>
+                
+                <div class="video-frame video-frame-1 wistia_embed wistia_async_eal6vsjpl2 popover=true popoverContent=link" >
+                    <a href="#">  
+                        <img src="./images/green-play-button.png" alt="" class="play" id="play-benefits">
+                    </a>
                 </div>
+               
             </div>
 
             <!-- section 13 Products  -->
@@ -655,31 +676,24 @@
                     <div class="prev arrow light-gray"></div>
                     <div class="content">
                         <div class="list-container">
-                            <h3 class="mobile">Flexkey</h3><br class="mobile"><h4 class="mobile">Expanded</h4><p class="mobile">Proprietary product for unique borrower situations such as: self-employed, investors, first-time home buyers, and good (not great) credit</p><br><h4 class="mobile">Restart</h4><p class="mobile">Proprietary product for unique borrower situations such as: self-employed, new wage-earner (minimum 12 months), first-time home buyers, and blemished credit</p>
-
-                            <p class="mobile">In order to optimize your experience and learn more, please access this page on a desktop machine.</p>
-                            <ul class="left desktop">
-                            <h3>FlexKey &mdash; Expanded</h3>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Proprietary product for unique borrower situations such as: self-employed, investors, first-time home buyers, and good (not great) credit</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Fully-Amortized Fixed rate and 5/1 LIBOR ARM; Fixed Rate Interest Only</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Foreclosure seasoning as short as 3 years for eligible borrowers</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Minimum credit score: 600</span></li>
+                  
+                            <ul class="left ">
+                            <h3>FlexKey Restart</h3>
+                                <li><span> Give borrowers a fresh start with this proprietary product featuring foreclosure seasoning as short as 1&nbsp;year, minimum credit score of 560 &amp; cash out available</span></li> 
+                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Second home &amp; investment up to 5 financed properties</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Income documentation alternatives</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Second home &amp; investment up to 20 financed properties</span></li>
+                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Fully-Amortized Fixed rate &amp; 5/1 LIBOR ARM; <br>Fixed Rate Interest Only</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Non-warrantable condos</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Non-occupying co-borrowers</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Manual underwriting required</span></li>
                             </ul>
 
-                            <ul class="right desktop">
-                            <h3>FlexKey &mdash; Restart</h3>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Proprietary product for unique borrower situations such as: self-employed, new wage-earner (minimum 12 months), first-time home buyers, and blemished credit</span></li> 
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Fully-Amortized Fixed rate and 5/1 LIBOR ARM; Fixed Rate Interest Only</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Foreclosure seasoning as short as 1 year for eligible borrowers</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Minimum credit score: 560</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Cash out available</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Income documentation alternatives</span></li>
-                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Second home &amp; investment up to 5 financed properties</span></li>
+                            <ul class="right ">
+                            <h3>FlexKey Expanded</h3>
+                                <li><span>Expand your reach with this proprietary product for unique borrower situations featuring up to 20 financed properties &amp; income documentation alternatives</span></li>
+                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Foreclosure seasoning as short as 3 years</span></li>
+                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Minimum credit score: 600</span></li>
+                                <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Fully-Amortized Fixed rate and 5/1 LIBOR ARM; <br>Fixed Rate Interest Only</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Non-warrantable condos</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Non-occupying co-borrowers</span></li>
                                 <li><img src="./images/checkmark-bullet-white.png" alt=""><span>Manual underwriting required</span></li>
@@ -957,7 +971,7 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-5 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-md-offset-0 col-lg-6">
-                            <p class="license-copy">&#169; 2016, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
+                            <p class="license-copy">&#169; 2017, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
                               NMLS Consumer Access site <a href="http://www.nmlsconsumeraccess.org">http://www.nmlsconsumeraccess.org</a>.&nbsp; &nbsp;<br>Licensed Mortgage Banker-NYS Department of Financial Services.
                             </p>
                         </div>
@@ -1053,33 +1067,13 @@
     </div>
     
     </div> <!--  end fullpage  -->
-    <!-- Spinner -->
-    <script>
-        var spinTimer;
+   
 
-        function spinner(){
-            var spinTimer = setTimeout(fadeOut(el), 3000); 
-        } 
+     <!-- Wistia code to embed  -->
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <!-- Wistia Json LP for SEO -->
+    <script src="https://fast.wistia.com/embed/medias/eal6vsjpl2.jsonp" async></script>
 
-        var el = document.querySelector('.spinner_hol');
-
-        // fade out
-        function fadeOut(el){
-            el.style.opacity = 1;
-
-            (function fade() {
-                if ((el.style.opacity -= .1) < 0) {
-                    // el.style.display = "none";
-                    el.className += " hide";
-                } else {
-                    requestAnimationFrame(fade);
-                    // el.style.display = "none";
-                       el.className += " hide";
-
-                }
-            })();
-        }
-    </script>
     <script>
          function submitForm() {
             var form = $('#recruiting-site-form');
