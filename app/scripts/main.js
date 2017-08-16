@@ -20,6 +20,47 @@ $(function() {
     });
 });
 
+var bgVideoOptions = {
+    version: "v1",
+    autoPlay: true,
+    controlsVisibleOnLoad: false,
+    fullscreenButton: false,
+    playbar: false,
+    playButton: false,
+    volumeControl: false,
+    volume: 0,
+    settingsControl: false,
+    endVideoBehavior: 'loop',
+    pauseButton: false,
+    playbackRateControl: false,
+    smallPlayButton: false,
+    qualityMax: 720,
+    plugin: {
+       cropFill: {
+            src: "//fast.wistia.com/labs/crop-fill/plugin.js"
+        }
+    }
+}
+
+window._wq = window._wq || [];
+
+_wq.push({ 
+    id: 'uwzjg67gxa', //PACE-2017-Loop
+    onReady: function(video1) {
+        video1.play();
+    },
+    options: bgVideoOptions
+});
+
+_wq.push({ 
+    id: '14b6d6ydce', //Overview-loop
+    onReady: function(video) {
+        // console.log("I got a handle to the video!", video);
+        video.play();
+    },
+    options: bgVideoOptions
+});
+
 
 $(function() {
   
@@ -86,8 +127,7 @@ $(function() {
         onLeave: function(index, nextIndex, direction){
 
             if(index == 3 && nextIndex == 1 ){
-               
-                $('video').get(1).play();
+                // $('video').get(1).play();
                 $('#fp-nav').css('display', 'none');
                 $('.timeline-dates').css('opacity', '0');  
                 $('.logo-wrapper').css('display', 'block');
@@ -106,22 +146,22 @@ $(function() {
             if(index == 12 && nextIndex == 11 ){
                 setTimeout(function(){
                     $('.slide-12-video').css('display', 'none'); 
-                    $('video').get(0).pause();
+                    // $('video').get(0).pause();
                 }, 550);
             }
             if(index == 12 && nextIndex == 13 ){
                 $('.img-block').css('background-image', 'url(../images/pace-loop.jpg)')
                 $('.slide-12-video').css('display', 'none'); 
-                $('video').get(0).pause();
+                // $('video').get(0).pause();
             }
             if(index == 11 && nextIndex == 12 ){
                 $('.slide-12-video').css('display', 'block'); 
-                $('video').get(0).play();
+                // $('video').get(0).play();
             }
             if(index == 13 && nextIndex == 12 ){
                 setTimeout(function(){
                     $('.slide-12-video').css('display', 'block'); 
-                    $('video').get(0).play();
+                    // $('video').get(0).play();
                 }, 300);
             }
             
@@ -132,7 +172,12 @@ $(function() {
         afterLoad: function(anchorLink, index){
 
             if(index == 1 ){
-                $('video').get(1).play();
+                _wq.push({ 
+                    id: '14b6d6ydce', //Overview-loop
+                    onReady: function(video) {
+                        video.play();
+                    }
+                });
             }else{
                 $('.logo-wrapper').css('display', 'none');                
             }
@@ -219,22 +264,24 @@ $(function() {
                 $('.img-block').css( 'background-image', 'url(./images/timeline/2016.jpg)' ),
                 $('#sec-2 .svg-container').addClass('active'),
                 $('.timeline-dates .ninth').addClass('active');
+                $('.slide-12-video').css('display', 'none');
             }else{
                 $('.timeline-dates .ninth').removeClass('active');
             }
 
-                
-            if(index == 11){
-                // $('.img-block').css( 'background-image', 'url(./images/screenshots/pace-loop.png)' );
-                $('.slide-12-video').css('display', 'none');
-            }
             if(index == 12 ){
                 $('.local a[href="#Benefits"]').addClass('active');
                 $('.slide-12-video').css('display', 'block');
-                $('video').get(0).play();
+                _wq.push({ 
+                    id: 'uwzjg67gxa', //PACE-2017-Loop
+                    onReady: function(video1) {
+                        video1.play();
+                    }
+                });
+
             }else{
                 $('.local a[href="#Benefits"]').removeClass('active');
-                 $('video').get(0).pause();
+                 // $('video').get(0).pause();
             }
             if(index == 13){
                 $('.local a[href="#Products"]').addClass('active');
@@ -260,7 +307,7 @@ $(function() {
                 $('.nav-local').toggleClass('active');
             });
 
-            $('video').get(1).play();
+            // $('video').get(1).play();
             // $('video').get(2).pause();
 
             // $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
@@ -270,9 +317,9 @@ $(function() {
            
             $('#sec-12 .play, #video-sec-12 .close-video').click(function(){
                 $('#video-sec-12').toggleClass('active');
-                $('video').get(2).play();
+                // $('video').get(2).play();
                 if(!$('#video-sec-12').hasClass('active')){
-                    $('video').get(2).pause();
+                    // $('video').get(2).pause();
                 }
             });
 
