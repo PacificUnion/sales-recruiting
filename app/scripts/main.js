@@ -11,14 +11,6 @@ $(function() {
     }
 });
 
-$(function() {
-    $('slide-12-video video source').each(function() {
-        var sourceFile = $(this).attr('data-src');
-        $(this).attr('src', sourceFile)
-        var video = this.parentElement;
-        video.load();   
-    });
-});
 
 var bgVideoOptions = {
     version: "v1",
@@ -55,7 +47,6 @@ _wq.push({
 _wq.push({ 
     id: '14b6d6ydce', //Overview-loop
     onReady: function(video) {
-        // console.log("I got a handle to the video!", video);
         video.play();
     },
     options: bgVideoOptions
@@ -306,20 +297,10 @@ $(function() {
                 $('.menu').toggleClass('active'),
                 $('.nav-local').toggleClass('active');
             });
-
-            // $('video').get(1).play();
-            // $('video').get(2).pause();
-
-            // $('#sec-11 .play, #sec-11 .video-overlay').click(function(){
-            //     $('#video-sec-11').toggleClass('active');
-
-            // });
            
             $('#sec-12 .play, #video-sec-12 .close-video').click(function(){
                 $('#video-sec-12').toggleClass('active');
-                // $('video').get(2).play();
                 if(!$('#video-sec-12').hasClass('active')){
-                    // $('video').get(2).pause();
                 }
             });
 
