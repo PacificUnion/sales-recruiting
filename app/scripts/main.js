@@ -13,7 +13,7 @@ $(function() {
 
 
 var bgVideoOptions = {
-    version: "v1",
+    version: 'v1',
     autoPlay: true,
     controlsVisibleOnLoad: false,
     fullscreenButton: false,
@@ -29,7 +29,7 @@ var bgVideoOptions = {
     qualityMax: 720,
     plugin: {
        cropFill: {
-            src: "//fast.wistia.com/labs/crop-fill/plugin.js"
+            src: '//fast.wistia.com/labs/crop-fill/plugin.js'
         }
     }
 }
