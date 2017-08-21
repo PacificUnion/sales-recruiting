@@ -105,7 +105,7 @@ $(function() {
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
-        fixedElements: '.nav-wrapper, .menu, .form-contact, .arrow-mobile, .video-overlay, .modal, .spinner_hol',
+        fixedElements: '.nav-wrapper, .menu, .form-contact, .arrow-mobile, .video-overlay, .modal, .spinner_hol, #skip-timeline',
         responsiveWidth: 768,
         responsiveHeight: 0,
         responsiveSlides: null,
@@ -122,7 +122,7 @@ $(function() {
                 $('#fp-nav').css('display', 'none');
                 $('.timeline-dates').css('opacity', '0');  
                 $('.logo-wrapper').css('display', 'block');
-
+                $('#skip-timeline').css('display', 'none');
             }
             if(index == 3 && nextIndex == 4 ){
                 $('#sec-2 .house-icon').css('opacity', '0');
@@ -132,7 +132,8 @@ $(function() {
             if(index == 10 && nextIndex == 11 ){
                
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('display', 'none'); 
+                $('.timeline-dates').css('display', 'none');
+                $('#skip-timeline').css('display', 'none');
             }
             if(index == 12 && nextIndex == 11 ){
                 setTimeout(function(){
@@ -169,20 +170,25 @@ $(function() {
                         video.play();
                     }
                 });
+                $('#skip-timeline').css('display', 'none');
+                $('.logo-wrapper').css('display', 'block');
             }else{
                 $('.logo-wrapper').css('display', 'none');                
             }
             if(index == 2){
                 $('.local a[href="#Vision"]').addClass('active');
+                $('#skip-timeline').css('display', 'none');
             }else{
                 $('.local a[href="#Vision"]').removeClass('active');
             }
             if( index <= 2 || index >= 12){
                 $('#fp-nav').css('display', 'none'); 
-                $('.timeline-dates').css('display', 'none');            
+                $('.timeline-dates').css('display', 'none');
+                $('#skip-timeline').css('display', 'none');        
             }else{
                 $('#fp-nav').css('display', 'block');
                 $('.timeline-dates').css('display', 'block');
+                $('#skip-timeline').css('display', 'block');
             }
             if(index == 3){
                 $('.local a[href="#Our-History"]').addClass('active');
