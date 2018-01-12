@@ -7,8 +7,7 @@
 	height: 100%
 	opacity: 0
 	z-index: -1
-	transition: opacity 300ms ease-in
-	transition: background-color 2000ms ease-in
+	transition: all 00ms ease-in
 	&-jumbo, &-va
 		background-color: $dark-gray 
 	&-flexkey, &-conv
@@ -88,15 +87,7 @@
 						&:nth-child(2)
 							padding-left: 0
 							text-indent: 0 
-		// .left
-		// 	width: 100%
-		// 	left: 0
-		// 	margin-bottom: 0 
-		// 	padding-bottom: 0
-		// .right
-		// 	width: 100%
-		// 	left: 0
-		// 	padding-top: 0
+		
 	.close-modal
 		left: 4%
 		width: 30px
@@ -228,5 +219,10 @@
 			left: 10%
 			width: 4rem
 			height: 4rem
-					 
+
+		&-flexkey
+			.content
+				.list-container
+					width: 100%
+					margin-left: 0
 
